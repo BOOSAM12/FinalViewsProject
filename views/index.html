@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PediYÁ </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../sources/css/index.css">
+</head>
+<body>
+    <header>
+        <section class="bar-logo">
+            <img id="icono-nav-bar"class="icono-hamburguesa" src="../sources/img/icono-hamburguesa.png" alt="">
+            <h1 class="nombreEmpresa">PediYÁ</h1>
+        </section>
+        
+        <section class="bar-search">
+            <img class="icono-search" src="../sources/img/search_.png" alt="">
+            <input class="input-search" type="text" placeholder="Tiendas, productos...">
+        </section>
+        <section class="bar-buttons">
+            <a class="button-ingreso" href="">Ingreso</a>
+            <img class="icono-carrito" src="../sources/img/shopping-cart_.png" alt="">
+    </header>
+    <aside id="cont-nav-bar">
+        <section class="nav-bar">
+            <div><img class="icono-nav" src="../sources/img/x-fill-12_.png" alt="" id="close-nav-bar"></div>
+            <div><img class="icono-nav" src="../sources/img/house.svg" alt=""></div>
+            <div><img class="icono-nav" src="../sources/img/service_icon_normal.jpg" alt=""></div>
+            <div><img class="icono-nav" src="../sources/img/about_icon.jpg" alt=""></div>
+            <div><img class="icono-nav" src="../sources/img/contact_icon.jpg" alt=""></div>
+            <div><img class="logo-nav-bar" src="../sources/img/logo-v1.1.png" alt=""></div>
+        </section>
+    </aside>
+    <main>
+        <section class="banner">
+            <article class="cont-slogan">
+                <!-- <img src="../sources/img/Rectángulo.png" alt="" class="logo-principal"> -->
+                <h2 class="titulo">PediYÁ</h2>
+                <p>Compra fácil, recoge rápido. PediYÁ...</p>
+                <button type="submit">¡Pide YÁ!</button>
+            </article>
+            <article class="cont-slider">
+                <h2>¡BIENVENIDOS!</h2>
+                <section class="container-slider">
+                    <section class="buttons-slider">
+                        <button type="submit" class="button-slider-advance" onclick="nextSlide()">></button>
+                        <button type="submit" class="button-slider-back" onclick="prevSlide()"><</button>
+                    </section>
+                    <section class="carousel">
+                        <section class="cont-img">
+                            <article class="slide active "><img src="../sources/img/slider-1.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-2.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-3.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-4.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-5.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-1.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-2.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-3.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-4.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-5.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-1.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-2.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-3.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-4.jpg" alt=""></article>
+                            <article class="slide blurred"><img src="../sources/img/slider-5.jpg" alt=""></article>
+                        </section>
+                    </section>
+                </section>
+        
+                <button class="button-action" type="submit">¡Únete YÁ!</button>
+            </article>
+        </section>
+
+        <section class="cont-carrito">
+            <article class="cont-buttons">
+                <img src="../sources/img/x-fill-12_.png" alt="">
+                <h2 class="titulo-carrito">PediYÁ</h2>
+                <img class="icono-carrito" src="../sources/img/shopping-cart_.png" alt="">
+                <section class="num-productos">
+                    <span>2</span>
+                </section>
+            </article>
+            <h2>¡Tú carrito!</h2>
+            <article class="card-carrito">
+                <section class="cont-acciones">
+                    <h3 class="nombreTienda"><span>Tienda: </span>Nombre de la empresa</h3>
+                    <img src="../sources/img/arrow-down-circle (1).svg" alt="Desplegar producto">
+                    <a href="#"><img src="../sources/img/x-fill-12_.png" alt="Eliminar producto"></a>
+                </section>
+                <section class="cont-imagen-producto">
+                    <img src="../sources/img/rice-ball_.png" alt="">
+                    <section class="cont-datos-producto">
+                        <h3 class="nombreProducto">Arroz ROA</h3>
+                        <p class="descripcionProducto">1 Libra</p>
+                        <article class="cont-cantidad">
+                            <p class="precioProducto">$50.00</p>
+                            <section class="cont-cantidad-producto">
+                                <button type="submit">-</button>
+                                <span>1</span>
+                                <button type="submit">+</button>
+                            </section>
+                        </article>
+                    </section>
+                    <article  class="cont-confirmar">
+                        <button type="submit">Confirmar</button>
+                        <p>Subtotal: <span>4.500</span></p>
+                    </article>
+                </section>
+            </article>
+            <article class="cont-total">
+                <h3>Total:</h3>
+                <p>$4.500</p>
+            </article>
+        </section>
+    </main>
+    
+    <script src="../sources/js/slider.js"></script>
+    <script src="../sources/js/nav-bar.js"></script>
+</body>
+</html>
