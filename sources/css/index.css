@@ -1,8 +1,10 @@
 :root{
     --color-primario: #7400C4;
+    --color-secundario: #E88BFF;
     --color-negro: #000000;
     --color-borde-claro:#999999;
     --color-text1:#757575;
+    --color-text2:#B032E7;
     --tamaño-icono1: 8px;
     --tamaño-icono2: 16px;
     --tamaño-icono3: 32px;
@@ -24,6 +26,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 /*DISEÑO DE BARRA DE NAVEGACION*/
 header{
@@ -91,8 +94,13 @@ header{
     margin: 0 40px 0 0;
     cursor: pointer;
 }
-.icono-carrito{
-    width: 35px;
+.icono-carrito-view{
+    width: 62px;
+    border: 1px solid var(--color-borde-claro) ;
+    border-radius: 10px;
+    padding: 5px 10px 1px 10px;
+    margin: 0 40px 0 0;
+    cursor: pointer;
 }
 
 /*DISEÑO DEL MAIN*/
@@ -283,3 +291,176 @@ aside {
 
 /*DISEÑO DEL CARRITO DE COMPRAS*/
 
+.cont-carrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 400px;
+    min-height: 100vh;
+    background-color: white;
+    right: -400px;
+    top: 0;
+    z-index: 9;
+    transition: right 0.5s ease-in-out;
+}
+.visible-carrito{
+    right: 0;
+}
+.cont-buttons{
+    width:100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cont-buttons img{
+    width: 60px;
+    cursor: pointer;
+}
+.icono-carrito{
+    width: 70px;
+    border: 1px solid var(--color-borde-claro) ;
+    border-radius: 10px;
+    padding: 5px 10px 1px 10px;
+
+    cursor: pointer;
+}
+.titulo-carrito{
+    font-size: 2em;
+    color: var(--color-primario);
+}
+.num-productos{
+    position: relative;
+}
+.num-productos span{
+    position: absolute;
+    right: -4px;
+    top: -10px;
+    background-color: var(--color-secundario);
+    border-radius: 25px;
+    padding: 0px 5px 0px 5px;
+}
+.cont-imagen-producto img{
+    width: var(--tamaño-icono4);
+}
+.tituloSecundario{
+    font-size: 1.2em;
+    font-weight: 300;
+}
+.card-carrito{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 1px solid var(--color-secundario);
+}
+.cont-acciones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nombreTienda{
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.nombreTienda span{
+    font-size: 1em;
+    font-weight: 300;
+    color: var(--color-text2);
+}
+.desplegarProducto, .eliminarProducto{
+    cursor: pointer;
+    width: var(--tamaño-icono3);
+}
+.cont-imagen-producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cont-datos-producto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.cont-datos-producto img{
+    width: 100px;
+    border: 1px solid var(--color-secundario) ;
+    padding: 10px 20px 10px 20px;
+}
+.contDescripcion{
+    width: calc(100% - 110px);
+}
+.cont-cantidad{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.precioProducto{
+    color: var(--color-secundario);
+}
+.cont-cantidad-producto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+    padding: 5px;
+    border-radius: 21px;
+    background-color: var(--color-secundario);
+}
+.cont-cantidad-producto button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+.cont-cantidad-producto span{
+    color: white;
+    font-size: 1em;
+}
+.cont-confirmar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+.cont-confirmar button{
+    width: 150px;
+    height: 40px;
+    background-color: var(--color-secundario);
+    color: #000000;
+    border: none;
+    font-size: 1em;
+    border-radius: 21px;
+    cursor: pointer;
+}
+.cont-confirmar span{
+    color: var(--color-secundario);
+    font-size: 1em;
+}
+
+.cont-total{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;    
+    font-size: 1em;
+    font-weight: 300;
+    border-top: 1px solid var(--color-secundario);
+}
+.cont-total p{
+    color: var(--color-text1);
+
+}
