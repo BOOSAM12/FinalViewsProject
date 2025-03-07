@@ -1,0 +1,179 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/* Estilos de la barra de navegación */
+nav {
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inicio {
+    font-weight: bold;
+    color: white;
+}
+
+/* Contenedor principal */
+.landing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Grid de características */
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    height: 80vh;
+    position: relative;
+}
+
+/* Estilos generales para los cuadros de características */
+.feature-item {
+    background-color: #3a0052;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Posiciones específicas para cada cuadro */
+.top-left {
+    grid-column: 1;
+    grid-row: 1 / span 1;
+}
+
+.top-center {
+    grid-column: 2;
+    grid-row: 1 / span 1;
+}
+
+.top-right {
+    grid-column: 3;
+    grid-row: 1 / span 1;
+}
+
+.bottom-left {
+    grid-column: 1;
+    grid-row: 3 / span 1;
+}
+
+.bottom-right {
+    grid-column: 3;
+    grid-row: 3 / span 1;
+}
+
+/* Estilos para el ícono de tienda */
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para los títulos y párrafos */
+.feature-item h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: #cccccc;
+    line-height: 1.4;
+}
+
+/* Estilos para el logo central */
+.logo-container {
+    grid-column: 2;
+    grid-row: 2 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo-wrapper {
+    background-color: #5e0094;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-wrapper:before, .logo-wrapper:after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 300px;
+    background-color: #7900c2;
+    border-radius: 50%;
+}
+
+.logo-wrapper:before {
+    left: -50px;
+    transform: rotate(20deg);
+}
+
+.logo-wrapper:after {
+    right: -50px;
+    transform: rotate(-20deg);
+}
+
+.logo-wrapper h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    z-index: 1;
+    position: relative;
+}
+
+/* Asegurando responsividad básica */
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        height: auto;
+    }
+    
+    .feature-item, .logo-container {
+        grid-column: 1;
+    }
+    
+    .top-left { grid-row: 1; }
+    .top-center { grid-row: 2; }
+    .top-right { grid-row: 3; }
+    .logo-container { grid-row: 4; }
+    .bottom-left { grid-row: 5; }
+    .bottom-right { grid-row: 6; }
+}

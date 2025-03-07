@@ -27,7 +27,7 @@
     </header>
     <aside id="cont-nav-bar">
         <section class="nav-bar">
-            <div><img class="icono-nav" src="../sources/img/x-fill-12_.png" alt="" id="close-nav-bar"></div>
+            <div><img class="icono-nav cerrar-nav" src="../sources/img/x-fill-12_.png" alt="" id="close-nav-bar"></div>
             <div><img class="icono-nav" src="../sources/img/house.svg" alt=""></div>
             <div><img class="icono-nav" src="../sources/img/service_icon_normal.jpg" alt=""></div>
             <div><img class="icono-nav" src="../sources/img/about_icon.jpg" alt=""></div>
@@ -75,144 +75,211 @@
             </article>
         </section>
 
-        <section class="cont-carrito" id="contCarrito">
-            <article class="cont-buttons">
-                <img src="../sources/img/x-fill-12_.png" alt="" id="cerrarCarrito">
-                <h2 class="titulo-carrito">PediYÁ</h2>
-                <section class="num-productos">
-                    <img class="icono-carrito" src="../sources/img/shopping-cart_.png" alt="">
-                    <span>2</span>
-                </section>
-            </article>
-            <h2 class="tituloSecundario">¡Tú carrito!</h2>
-            <article class="cont-cards">
-                <article class="card-carrito">
-                    <section class="cont-acciones">
-                        <h3 class="nombreTienda"><span>Tienda: </span>Nombre de la empresa</h3>
-                        <img id="desplegarProducto" class="desplegarProducto" src="../sources/img/arrow-up-circle.svg" alt="Desplegar producto" >
-                        <img class="eliminarProducto" src="../sources/img/x-fill-12_.png" alt="Eliminar producto">
-                    </section>
-                    <section class="cont-imagen-producto" id="cont-imagen-producto">
-                        <section class="cont-datos-producto">
-                            <img src="../sources/img/rice-ball_.png" alt="">
-                            <article class="contDescripcion">
-                                <h3 class="nombreProducto">Arroz ROA</h3>
-                                <p class="descripcionProducto">1 Libra</p>
-                                <article class="cont-cantidad">
-                                    <p class="precioProducto">$5000.00</p>
-                                    <section class="cont-cantidad-producto">
-                                        <button type="submit">-</button>
-                                        <span>1</span>
-                                        <button type="submit">+</button>
-                                    </section>
-                                </article>
-                            </article>    
-                        </section>
-                        <article  class="cont-confirmar">
-                            <button type="submit">Confirmar</button>
-                            <p>Subtotal: <span>$4.500</span></p>
-                        </article>
-                    </section>
-                    <section class="cont-imagen-producto" id="cont-imagen-producto">
-                        <section class="cont-datos-producto">
-                            <img src="../sources/img/rice-ball_.png" alt="">
-                            <article class="contDescripcion">
-                                <h3 class="nombreProducto">Arroz ROA</h3>
-                                <p class="descripcionProducto">1 Libra</p>
-                                <article class="cont-cantidad">
-                                    <p class="precioProducto">$5000.00</p>
-                                    <section class="cont-cantidad-producto">
-                                        <button type="submit">-</button>
-                                        <span>1</span>
-                                        <button type="submit">+</button>
-                                    </section>
-                                </article>
-                            </article>    
-                        </section>
-                        <article  class="cont-confirmar">
-                            <button type="submit">Confirmar</button>
-                            <p>Subtotal: <span>$4.500</span></p>
-                        </article>
-                    </section>
-                    <section class="cont-imagen-producto" id="cont-imagen-producto">
-                        <section class="cont-datos-producto">
-                            <img src="../sources/img/rice-ball_.png" alt="">
-                            <article class="contDescripcion">
-                                <h3 class="nombreProducto">Arroz ROA</h3>
-                                <p class="descripcionProducto">1 Libra</p>
-                                <article class="cont-cantidad">
-                                    <p class="precioProducto">$5000.00</p>
-                                    <section class="cont-cantidad-producto">
-                                        <button type="submit">-</button>
-                                        <span>1</span>
-                                        <button type="submit">+</button>
-                                    </section>
-                                </article>
-                            </article>    
-                        </section>
-                        <article  class="cont-confirmar">
-                            <button type="submit">Confirmar</button>
-                            <p>Subtotal: <span>$4.500</span></p>
-                        </article>
-                    </section>
-                    <section class="cont-imagen-producto" id="cont-imagen-producto">
-                        <section class="cont-datos-producto">
-                            <img src="../sources/img/rice-ball_.png" alt="">
-                            <article class="contDescripcion">
-                                <h3 class="nombreProducto">Arroz ROA</h3>
-                                <p class="descripcionProducto">1 Libra</p>
-                                <article class="cont-cantidad">
-                                    <p class="precioProducto">$5000.00</p>
-                                    <section class="cont-cantidad-producto">
-                                        <button type="submit">-</button>
-                                        <span>1</span>
-                                        <button type="submit">+</button>
-                                    </section>
-                                </article>
-                            </article>    
-                        </section>
-                        <article  class="cont-confirmar">
-                            <button type="submit">Confirmar</button>
-                            <p>Subtotal: <span>$4.500</span></p>
-                        </article>
+        <!-- ESTRUCTURA DEL CARRITO DE COMPRAS -->
+        <article class="overlay-carrito" id="overlayCarrito">
+            <section class="cont-carrito" id="contCarrito">
+                <article class="cont-buttons">
+                    <img src="../sources/img/x-fill-12_.png" alt="" id="cerrarCarrito">
+                    <h2 class="titulo-carrito">PediYÁ</h2>
+                    <section class="num-productos">
+                        <img class="icono-carrito" src="../sources/img/shopping-cart_.png" alt="">
+                        <span>2</span>
                     </section>
                 </article>
-                <article class="card-carrito">
-                    <section class="cont-acciones">
-                        <h3 class="nombreTienda"><span>Tienda: </span>Nombre de la empresa</h3>
-                        <img class="desplegarProducto" src="../sources/img/arrow-up-circle.svg" alt="Desplegar producto" id="desplegarProducto">
-                        <img class="eliminarProducto" src="../sources/img/x-fill-12_.png" alt="Eliminar producto">
-                    </section>
-                    <section class="cont-imagen-producto" id="cont-imagen-producto">
-                        <section class="cont-datos-producto">
-                            <img src="../sources/img/rice-ball_.png" alt="">
-                            <article class="contDescripcion">
-                                <h3 class="nombreProducto">Arroz ROA</h3>
-                                <p class="descripcionProducto">1 Libra</p>
-                                <article class="cont-cantidad">
-                                    <p class="precioProducto">$5000.00</p>
-                                    <section class="cont-cantidad-producto">
-                                        <button type="submit">-</button>
-                                        <span>1</span>
-                                        <button type="submit">+</button>
-                                    </section>
-                                </article>
-        
-                            </article>    
+                <h2 class="tituloSecundario">¡Tú carrito!</h2>
+                <article class="cont-cards">
+                    <article class="card-carrito">
+                        <section class="cont-acciones">
+                            <h3 class="nombreTienda"><span>Tienda: </span>Nombre de la empresa</h3>
+                            <img id="desplegarProducto" class="desplegarProducto" src="../sources/img/arrow-up-circle.svg" alt="Desplegar producto" >
+                            <img class="eliminarProducto" src="../sources/img/x-fill-12_.png" alt="Eliminar producto">
                         </section>
-                        <article  class="cont-confirmar">
-                            <button type="submit">Confirmar</button>
-                            <p>Subtotal: <span>$4.500</span></p>
-                        </article>
-                    </section>
-                </article>    
-            </article>
-            
-            <article class="cont-total">
-                <h3>Total:</h3>
-                <p>$4.500</p>
+                        <section class="cont-productos">
+                            <section class="cont-imagen-producto" id="cont-imagen-producto">
+                                <section class="cont-datos-producto">
+                                    <img src="../sources/img/rice-ball_.png" alt="">
+                                    <article class="contDescripcion">
+                                        <h3 class="nombreProducto">Arroz ROA</h3>
+                                        <p class="descripcionProducto">1 Libra</p>
+                                        <article class="cont-cantidad">
+                                            <p class="precioProducto">$5000.00</p>
+                                            <section class="cont-cantidad-producto">
+                                                <button type="submit">-</button>
+                                                <span>1</span>
+                                                <button type="submit">+</button>
+                                            </section>
+                                        </article>
+                                    </article>    
+                                </section>
+                                <article  class="cont-confirmar">
+                                    <button type="submit">Confirmar</button>
+                                    <p>Subtotal: <span>$4.500</span></p>
+                                </article>
+                            </section>
+                            <section class="cont-imagen-producto" id="cont-imagen-producto">
+                                <section class="cont-datos-producto">
+                                    <img src="../sources/img/rice-ball_.png" alt="">
+                                    <article class="contDescripcion">
+                                        <h3 class="nombreProducto">Arroz ROA</h3>
+                                        <p class="descripcionProducto">1 Libra</p>
+                                        <article class="cont-cantidad">
+                                            <p class="precioProducto">$5000.00</p>
+                                            <section class="cont-cantidad-producto">
+                                                <button type="submit">-</button>
+                                                <span>1</span>
+                                                <button type="submit">+</button>
+                                            </section>
+                                        </article>
+                                    </article>    
+                                </section>
+                                <article  class="cont-confirmar">
+                                    <button type="submit">Confirmar</button>
+                                    <p>Subtotal: <span>$4.500</span></p>
+                                </article>
+                            </section>
+                            <section class="cont-imagen-producto" id="cont-imagen-producto">
+                                <section class="cont-datos-producto">
+                                    <img src="../sources/img/rice-ball_.png" alt="">
+                                    <article class="contDescripcion">
+                                        <h3 class="nombreProducto">Arroz ROA</h3>
+                                        <p class="descripcionProducto">1 Libra</p>
+                                        <article class="cont-cantidad">
+                                            <p class="precioProducto">$5000.00</p>
+                                            <section class="cont-cantidad-producto">
+                                                <button type="submit">-</button>
+                                                <span>1</span>
+                                                <button type="submit">+</button>
+                                            </section>
+                                        </article>
+                                    </article>    
+                                </section>
+                                <article  class="cont-confirmar">
+                                    <button type="submit">Confirmar</button>
+                                    <p>Subtotal: <span>$4.500</span></p>
+                                </article>
+                            </section>
+                            <section class="cont-imagen-producto" id="cont-imagen-producto">
+                                <section class="cont-datos-producto">
+                                    <img src="../sources/img/rice-ball_.png" alt="">
+                                    <article class="contDescripcion">
+                                        <h3 class="nombreProducto">Arroz ROA</h3>
+                                        <p class="descripcionProducto">1 Libra</p>
+                                        <article class="cont-cantidad">
+                                            <p class="precioProducto">$5000.00</p>
+                                            <section class="cont-cantidad-producto">
+                                                <button type="submit">-</button>
+                                                <span>1</span>
+                                                <button type="submit">+</button>
+                                            </section>
+                                        </article>
+                                    </article>    
+                                </section>
+                                <article  class="cont-confirmar">
+                                    <button type="submit">Confirmar</button>
+                                    <p>Subtotal: <span>$4.500</span></p>
+                                </article>
+                            </section>
+                        </section>
+                    </article>    
+                    <article class="card-carrito">
+                        <section class="cont-acciones">
+                            <h3 class="nombreTienda"><span>Tienda: </span>Nombre de la empresa</h3>
+                            <img class="desplegarProducto" src="../sources/img/arrow-up-circle.svg" alt="Desplegar producto" id="desplegarProducto">
+                            <img class="eliminarProducto" src="../sources/img/x-fill-12_.png" alt="Eliminar producto">
+                        </section>
+                        <section class="cont-productos">
+                            <section class="cont-imagen-producto" id="cont-imagen-producto">
+                                <section class="cont-datos-producto">
+                                    <img src="../sources/img/rice-ball_.png" alt="">
+                                    <article class="contDescripcion">
+                                        <h3 class="nombreProducto">Arroz ROA</h3>
+                                        <p class="descripcionProducto">1 Libra</p>
+                                        <article class="cont-cantidad">
+                                            <p class="precioProducto">$5000.00</p>
+                                            <section class="cont-cantidad-producto">
+                                                <button type="submit">-</button>
+                                                <span>1</span>
+                                                <button type="submit">+</button>
+                                            </section>
+                                        </article>
+                
+                                    </article>    
+                                </section>
+                                <article  class="cont-confirmar">
+                                    <button type="submit">Confirmar</button>
+                                    <p>Subtotal: <span>$4.500</span></p>
+                                </article>
+                            </section>
+                        </section>
+                        
+                    </article>    
+                </article>
+                
+                <article class="cont-total">
+                    <h3>Total:</h3>
+                    <p>$4.500</p>
+                </article>
+            </section>
+    
+        </article>
+        <!-- ESTRUCTURA DEL BENTOR -->
+        <section class="bentor-container">
+            <article class="bentor">
+                <section  class="card-bentor bentor-left-top">
+                    <article>
+                        <img src="../sources/img/logo-v1.png" alt="Bentor">
+                    </article>
+                    <article>
+                        <h2>Accede a todas las tiendas de barrio en un solo lugar</h2>
+                    </article>
+                    <article>
+                        <p>Explora y realiza pedidos fácilmente desde múltiples tiendas cercanas.</p>
+                    </article>
+                </section>
+    
+                <section class="card-bentor bentor-medium-top">
+                    <article>
+                        <h2>Estima tus ventas</h2>
+                    </article>
+                    <article>
+                        <p>Analiza la demanda y las tendencias de comprar antes de tomar decisiones de inventario</p>
+                    </article>
+                </section>
+    
+                <section class="card-bentor bentor-rigth-top">
+                    <article>
+                        <h2>Encuentra dónde destacan tus productos</h2>
+                    </article>
+                    <article>
+                        <p>Identifica qué productos son los más solicitados y optimiza tu stock.</p>
+                    </article>
+                </section>
+    
+                <section class="card-bentor bentor-medium">
+                    <h2>PediYÁ</h2>
+                </section>
+    
+                <section class="card-bentor bentor-left-bottom">
+                    <article>
+                        <h2>Mantente por delante de la competencia</h2>
+                    </article>
+                    <article>
+                        <p>Monitorea las tendencias de compra en tiempo real y ajusta tu oferta según la demanda.</p>
+                    </article>
+                </section>
+    
+                <section class="card-bentor bentor-rigth-bottom">
+                    <article>
+                        <h2>Predice tus ganancias con precisión</h2>
+                    </article>
+                    <article>
+                        <p>Calcula tus márgenes de ganancia con anticipación y optimiza tus precios para mayor rentabilidad.</p>
+                    </article>
+                </section>
+    
             </article>
         </section>
+        
     </main>
     
     <script src="../sources/js/slider.js"></script>
