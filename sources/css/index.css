@@ -539,10 +539,9 @@ aside {
     align-items: center;
 }
 .bentor{
-    width: 85vw;
-    height: 85vh;
+    width: 100vw;
+    height: 100vh;
     background-color: var(--color-cuarto);
-    border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
