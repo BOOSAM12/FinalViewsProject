@@ -3,6 +3,7 @@
     --color-secundario: #E88BFF;
     --color-terciario: #3F1650;
     --color-cuarto: #270D32;
+    --color-quinto: #DDBFE3;
     --color-negro: #000000;
     --color-borde-claro:#999999;
     --color-text1:#757575;
@@ -260,7 +261,9 @@ aside {
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    position: absolute;
+    position: fixed;
+
+    top:0;
     width: 100vw;
     background-color: #00000091;
     z-index: 10;
@@ -284,16 +287,27 @@ aside {
     align-items: center;
     justify-content: space-around;
 }
+.cont-icono{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease-in-out;
+}
 .icono-nav{
-    width: var(--tamaño-icono4);
+    width: var(--tamaño-icono3);
     cursor: pointer;
-
+    transition: all 300ms ease-in-out;
+}
+.cont-icono:hover{
+    background-color: var(--color-quinto);
+    color: var(--color-primario);
 }
 .logo-nav-bar{
-    width: 150px;
+    width: 60px;
 }
-
-
 
 /*DISEÑO DEL CARRITO DE COMPRAS*/
 .overlay-carrito{
@@ -530,7 +544,7 @@ aside {
     color: var(--color-text1);
 }
 
-/*DISEÑO DEL BENTOS*/
+/*DISEÑO DEL BENTOR*/
 .bentor-container{
     width: 100vw;
     height: 100vh;
@@ -631,6 +645,8 @@ aside {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
 }
 
 .bentor-left-bottom{
