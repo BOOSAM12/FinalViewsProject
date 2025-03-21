@@ -98,7 +98,8 @@ form h2{
     border-bottom: 2px solid var(--color-primario);
     background-color: transparent;
     &::placeholder{
-        color:var(--color-primario)
+        color:var(--color-primario);
+        opacity: .5;
     }
     &:focus{
         outline: none;
