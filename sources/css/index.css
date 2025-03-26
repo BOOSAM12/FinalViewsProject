@@ -821,7 +821,7 @@ footer{
 }
 
 /*RESPONSIVE*/
-@media (width >= 370px) and (width <= 520px){
+@media (width >= 370px) and (width <= 720px){
     /*DISEÑO DE BARRA DE NAVEGACION*/
     /*BAR-LOGO*/
     .icono-hamburguesa{
@@ -922,11 +922,10 @@ footer{
         gap: 10px;
         padding: 10px;
     }
-
     .card-bentor{
         background-color: var(--color-terciario);
         border-radius: 10px;
-        padding: 10px;
+        padding: 15px;
         box-shadow: inset 0px 0px 30px 15px var(--color-cuarto);
     }
     .bentor-left-top{
@@ -996,7 +995,7 @@ footer{
         font-size: 0.7em;
     }
     .bentor-rigth-bottom article:nth-child(2) p{
-        width: 90%;
+        width: 95%;
         font-size: 0.8em;
     }
     /*DISEÑO DEL FOOTER*/
@@ -1045,15 +1044,173 @@ footer{
     .cont-iconos-redes{
         width: 50%;
         margin-top: 20px;
+        margin-bottom: 10px;
     }
     .icono-redes{
         width: 30px;
         height: 30px;
         transition: all 300ms ease-in-out;
     }
-    .icono-redes:hover{
-        fill: var(--color-primario);
-        scale: 1.2;
-    }
     
+}
+@media (width >= 720px) and (width <= 1280px){
+    /*DISEÑO DE BARRA DE NAVEGACION*/
+    /*BAR-LOGO*/
+    .icono-hamburguesa{
+        width: 30px;
+        margin-right: 10px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    /*BAR-SEARCH*/
+    .bar-search{
+        width: 40%;
+        padding: 7px;
+    }
+    .icono-search{
+        width: 20px;
+    }
+    .input-search{
+        font-size: 1em;
+    }
+    /*BAR-BUTTONS */
+    .bar-buttons{
+        width: 30%;
+    }
+    /*DISEÑO DEL MAIN*/
+    .banner{
+        width: 100vw;
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .cont-slogan{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .titulo{
+        font-size: 3.2em;
+    }
+    .cont-slogan p{
+        font-size: 1em;
+    }
+    .cont-slogan button{
+        width: 150px;
+    }
+
+    .cont-slider{
+        width: 65%;
+        padding-left: 1px;
+    }
+    .buttons-slider{
+        display: none;
+    }
+    .carousel {
+        position: relative;
+        width: 600px;
+        height: 280px;
+    }
+    .slide {
+        flex: 0 0 170px;
+        height: 200px;
+        transition: filter 0.5s ease, opacity 0.5s ease;
+    }
+    .slide img {
+        width: 220px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        
+    }
+    .active {
+        scale: 1.3;
+    }
+    /*DISEÑO DEL BENTOR*/
+    .card-bentor{
+        padding: 15px;
+    }
+    .bentor-left-top article:nth-child(1) img{
+        width: 120px;
+    }
+    .bentor-left-top article:nth-child(2){
+        width: 90%;
+        font-size: .8em;
+    }
+
+    .bentor-rigth-top{
+        grid-column: 4/5;
+        grid-row: -4/-2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .bentor-rigth-top article:nth-child(1){
+        color: white;
+        font-size: .9em;
+    }
+    .bentor-left-bottom article:nth-child(1){
+        font-size: .9em;
+    }
+    .bentor-rigth-bottom{
+        align-content: space-around;
+    }
+    .bentor-rigth-bottom article:nth-child(1){
+        font-size: .9em;
+    }
+    /*DISEÑO DEL FOOTER*/
+
+    footer{
+        width: 100%;
+        height: 350px;
+        padding:20px;
+        justify-content: space-between;
+    }
+    .cont-nombre-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        text-align: center;
+    }
+    .cont-nombre-footer h2{
+        color: var(--color-primario);
+        font-size: 2.5em;
+    }
+    .cont-nombre-footer p{
+        font-size: 1.3em;
+    }
+    .cont-iconos-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 60%;
+        border-left: 1px solid black;
+    }
+    .cont-icono-footer{
+        height: 75px;
+    }
+    .cont-icono-footer h3{
+        color: var(--color-primario);
+        font-size: 1em;
+    }
+    .icono-footer{
+        width: 50px;
+        height: 50px;
+        transition: all 300ms ease-in-out;
+    }
+    .cont-iconos-redes{
+        width: 40%;
+    }
+    .icono-redes{
+        width: 40px;
+        height: 50px;
+        transition: all 300ms ease-in-out;
+    }
 }

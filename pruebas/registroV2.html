@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PediYÁ - Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #4b0082;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .login-card {
+            background-color: white;
+            width: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            padding: 30px;
+        }
+        
+        /* Método 1: Usando clip-path */
+        .login-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 150px;
+            background-color: #8000ff;
+            clip-path: polygon(0 0, 0% 100%, 100% 0);
+        }
+        
+        .login-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            color: #8000ff;
+            margin-top: 50px;
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #8000ff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="login-content">
+            <h1>PediYÁ</h1>
+            <p class="subtitle">Vende fácil, recoge rápido. PediYÁ...</p>
+            
+            <input type="email" placeholder="Tu correo electrónico">
+            <input type="password" placeholder="Contraseña">
+            
+            <button>Iniciar sesión</button>
+        </div>
+    </div>
+</body>
+</html>
