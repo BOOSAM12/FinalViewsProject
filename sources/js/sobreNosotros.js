@@ -24,7 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update progress line
         const progressWidth = (activeIndex / (timelinePoints.length - 1)) * 100;
-        timelineProgress.style.width = `${progressWidth}%`;
+        if (window.matchMedia("(max-width: 1280px)").matches) {
+            // Restablecer width
+            timelineProgress.style.height = `${progressWidth}%`; // Usar height en pantallas pequeñas
+        } else {
+             // Restablecer height
+            timelineProgress.style.width = `${progressWidth}%`; // Usar width en pantallas grandes
+        }
     }
 
     // Click event for points
