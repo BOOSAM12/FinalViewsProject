@@ -218,13 +218,14 @@ main{
 
 .cont-cards-productos{
     width: 100%;
-    height: 320px;
+    height: 310px;
     display: grid;
-    place-content: center;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, 200px);
-    grid-template-rows: repeat(auto, 280px);
+    grid-template-rows: repeat(auto-fit, 280px);
     overflow-y: auto;
+    justify-content: space-between;
+    align-content: space-around;
 
 }
 .card-producto{
@@ -294,7 +295,7 @@ main{
     transition: fill 0.3s ease;
 }
 
-.cont-corazon input:checked + .corazon-icono path {
+.cont-corazon input:checked + .corazon-icono {
     fill: #ff0000;
     stroke: none;
 }
