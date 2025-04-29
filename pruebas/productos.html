@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legumbrería los Mendoza - PediYÁ</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* style.css */
+:root {
+    --primary-color: #6a0dad; /* Morado principal aproximado */
+    --primary-light: #e0c7f7;
+    --secondary-color: #f8f8f8;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #eee;
+    --white: #fff;
+    --discount-color: #ff4d4d;
+    --open-status-color: #4caf50;
+    --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    background-color: var(--white);
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+/* --- Header --- */
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--white);
+    position: sticky; /* Para que se quede fijo al hacer scroll */
+    top: 0;
+    z-index: 100;
+}
+
+.icon-button {
+    font-size: 1.5rem;
+    padding: 5px;
+    color: var(--primary-color);
+    position: relative; /* Para el badge del carrito */
+}
+
+.menu-button {
+    margin-right: 15px;
+}
+
+.logo {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-right: auto; /* Empuja lo demás a la derecha */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    flex-grow: 1; /* Ocupa espacio disponible */
+    max-width: 400px; /* Limita el ancho en pantallas grandes */
+}
+
+.search-bar .search-icon {
+    color: var(--text-light);
+    margin-right: 5px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 0.9rem;
+}
+
+.cart-button .cart-badge {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background-color: var(--discount-color);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    font-weight: bold;
+}
+
+/* --- Store Info --- */
+.store-info {
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.store-image-placeholder {
+    width: 80px; /* Tamaño como en la imagen */
+    height: 80px;
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-right: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    flex-shrink: 0; /* Evita que se encoja */
+}
+
+.store-details h1 {
+    margin: 0 0 5px 0;
+    font-size: 1.4rem;
+    color: var(--white);
+}
+
+.store-status {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: var(--primary-light);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--open-status-color); /* Verde para abierto */
+    margin-right: 5px;
+}
+/* Añadir clase .closed con color rojo/gris si es necesario */
+
+.store-actions {
+    display: flex;
+    gap: 10px; /* Espacio entre botones */
+}
+
+.action-button {
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.action-button:hover {
+    background-color: var(--primary-light);
+}
+
+
+/* --- Tabs --- */
+.content-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--white);
+    padding: 0 15px;
+    position: sticky; /* Para que se quede debajo del header */
+    top: 61px; /* Altura aproximada del header */
+    z-index: 99;
+}
+
+.tab-button {
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+    position: relative;
+    border-bottom: 3px solid transparent; /* Espacio para la línea activa */
+    margin-bottom: -1px; /* Alinea borde inferior con el borde del contenedor */
+}
+
+.tab-button.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* --- Tab Content --- */
+.tab-content {
+    display: none; /* Ocultar por defecto */
+    padding: 20px 15px;
+}
+
+.tab-content.active {
+    display: block; /* Mostrar el activo */
+}
+
+.tab-content h2 {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* --- Filters --- */
+.filter-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Para que los filtros bajen si no caben */
+    gap: 10px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Idem */
+}
+
+.filter-button {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+.filter-button.active {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.view-all {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap; /* Evita que se parta en dos líneas */
+}
+
+/* --- Product Grid --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Rejilla responsive */
+    gap: 15px;
+}
+
+.product-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden; /* Para contener el badge */
+    position: relative; /* Para posicionar elementos hijos absolutos */
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image-placeholder {
+    height: 120px; /* Altura para la imagen */
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.product-info {
+    padding: 10px 12px;
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.product-info h3 {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    color: var(--text-color);
+}
+
+.product-info p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+.price {
+    display: flex;
+    align-items: baseline; /* Alinea los precios */
+    gap: 8px;
+}
+
+.current-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.old-price {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    text-decoration: line-through;
+}
+
+.add-to-cart-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5rem; /* Tamaño del '+' */
+    line-height: 30px; /* Centra el '+' verticalmente */
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.add-to-cart-button:hover {
+     background-color: darken(var(--primary-color), 10%);
+}
+
+
+.product-fav-button {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 0.9rem;
+    line-height: 24px;
+    text-align: center;
+    padding: 0;
+}
+/* Añadir clase .favorited para cambiar el icono/color si es necesario */
+
+.discount-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: var(--discount-color);
+    color: var(--white);
+    padding: 3px 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <button class="icon-button menu-button">☰</button>
+        <div class="logo">PEDIYÁ</div>
+        <div class="search-bar">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Tiendas...">
+        </div>
+        <button class="icon-button notification-button">🔔</button>
+        <button class="icon-button cart-button">
+            🛒
+            <span class="cart-badge">3</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="store-info">
+            <div class="store-image-placeholder">[ 200 X 200 ]</div>
+            <div class="store-details">
+                <h1>Legumbrería los Mendoza</h1>
+                <p class="store-status">
+                    <span class="status-dot open"></span> Abierto • Cierra 9:00 PM
+                </p>
+                <div class="store-actions">
+                    <button class="action-button call-button">📞 Llamar</button>
+                    <button class="action-button favorite-button">❤️ Favorito</button>
+                    <button class="action-button directions-button">📍 Cómo llegar</button>
+                </div>
+            </div>
+        </section>
+
+        <nav class="content-tabs">
+            <button class="tab-button active" data-tab="productos">Productos</button>
+            <button class="tab-button" data-tab="detalles">Detalles</button>
+        </nav>
+
+        <section id="productos" class="tab-content active">
+            <h2>Productos</h2>
+            <div class="filter-controls">
+                <div class="filters">
+                    <button class="filter-button active">Todos</button>
+                    <button class="filter-button">Frutas</button>
+                    <button class="filter-button">Verduras</button>
+                    <button class="filter-button">bebidas</button>
+                    <button class="filter-button">Granos</button>
+                </div>
+                <a href="#" class="view-all">Ver todos</a>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <button class="product-fav-button">♡</button>
+                    <div class="discount-badge">-15%</div>
+                    <div class="product-image-placeholder">[ 200 X 150 ]</div>
+                    <div class="product-info">
+                        <h3>Manzanas rojas</h3>
+                        <p>Manzanas frescas de temporada, cultivadas</p>
+                        <div class="price">
+                            <span class="current-price">$4.50</span>
+                            <span class="old-price">$5.30</span>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-button">+</button>
+                </article>
+
+                <article class="product-card">
+                     <button class="product-fav-button">♡</button>
+                    <div class="discount-badge">-15%</div>
+                    <div class="product-image-placeholder">[ 200 X 150 ]</div>
+                     <div class="product-info">
+                        <h3>Manzanas rojas</h3>
+                        <p>Manzanas frescas de temporada, cultivadas</p>
+                        <div class="price">
+                            <span class="current-price">$4.50</span>
+                            <span class="old-price">$5.30</span>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-button">+</button>
+                </article>
+
+                <article class="product-card">
+                     <button class="product-fav-button">♡</button>
+                    <div class="discount-badge">-15%</div>
+                    <div class="product-image-placeholder">[ 200 X 150 ]</div>
+                     <div class="product-info">
+                        <h3>Manzanas rojas</h3>
+                        <p>Manzanas frescas de temporada, cultivadas</p>
+                        <div class="price">
+                            <span class="current-price">$4.50</span>
+                            <span class="old-price">$5.30</span>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-button">+</button>
+                </article>
+                 </div>
+        </section>
+
+        <section id="detalles" class="tab-content">
+            <h2>Detalles de la Tienda</h2>
+            <p>Información adicional sobre la Legumbrería los Mendoza...</p>
+        </section>
+    </main>
+
+    <script>
+        // script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    const filterButtons = document.querySelectorAll('.filter-button');
+
+    // --- Manejo de Pestañas (Tabs) ---
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // 1. Quitar clase 'active' de todas las pestañas y contenidos
+            tabs.forEach(t => t.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+
+            // 2. Añadir clase 'active' a la pestaña clickeada
+            tab.classList.add('active');
+
+            // 3. Mostrar el contenido correspondiente
+            const targetTabContentId = tab.getAttribute('data-tab'); // o tab.dataset.tab
+            const targetTabContent = document.getElementById(targetTabContentId);
+            if (targetTabContent) {
+                targetTabContent.classList.add('active');
+            }
+        });
+    });
+
+    // --- Manejo de Botones de Filtro (Visual) ---
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // 1. Quitar clase 'active' de todos los botones de filtro
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+
+            // 2. Añadir clase 'active' al botón clickeado
+            button.classList.add('active');
+
+            // --- Aquí iría la lógica para filtrar los productos ---
+            // const filterType = button.textContent; // o un data-attribute
+            // console.log(`Filtrar por: ${filterType}`);
+            // (Esta parte requiere más lógica para mostrar/ocultar productos reales)
+        });
+    });
+
+    // --- Potenciales mejoras (requieren más lógica) ---
+    // - Lógica para añadir al carrito (actualizar badge, etc.)
+    // - Lógica para marcar como favorito
+// - Cargar productos dinámicamente
+    // - Filtrado real de productos
+});
+    </script>
+</body>
+</html>
