@@ -20,6 +20,7 @@
     margin: 0;
     padding: 0;
     font-family: "ADLaM Display", serif;
+    font-weight: 300;
     scrollbar-width: thin;
     scrollbar-color: #888 transparent;
 
@@ -74,6 +75,7 @@ main{
 }
 .cont-info h2{
     color: white;
+    font-weight: 300;
 }
 
 .cont-horario{
@@ -81,8 +83,10 @@ main{
     justify-content: space-between;
     align-items: center ;
     color: white;
+    font-weight: 300;
     width: 30%;
     margin-top: 20px;
+
 }
 .cont-info img{
     width: var(--tamaño-icono3);
@@ -337,4 +341,57 @@ main{
     font-size: 1em;
     cursor: pointer;
     border: none;
+}
+
+/*DISEÑO DEL CONTENEDOR DE DETALLES*/
+.cont-detalles-tienda{
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-top: 20px;
+}
+.tituloDetalles{
+    font-size: 2em;
+}
+.cont-resenas{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.resena{
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resena p:nth-child(1){
+    font-size: 1.5em;
+    color: var(--color-sexto);
+}
+.resena p:nth-child(2){
+    font-size: .9em;
+    color: var(--color-text1);
+}
+.cont-datos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.sect-dato{
+    
 }
