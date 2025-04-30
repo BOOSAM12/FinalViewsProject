@@ -1,6 +1,6 @@
 const btnCategoria = document.querySelectorAll('.btn-categoria');
-const productos = document.querySelectorAll('.card-producto');
-const labelFavorito = document.querySelectorAll('.cont-corazon');
+// const productos = document.querySelectorAll('.card-producto');
+// const labelFavorito = document.querySelectorAll('.cont-corazon');
 
 
 btnCategoria.forEach((btn) => {
@@ -9,6 +9,6 @@ btnCategoria.forEach((btn) => {
     });
 });
 
-productos.forEach((btnFavoritoProducto, index) => {
+// productos.forEach((btnFavoritoProducto, index) => {
 
-});
+// });
