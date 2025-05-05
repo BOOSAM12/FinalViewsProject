@@ -1,7 +1,8 @@
 const btnCategoria = document.querySelectorAll('.btn-categoria');
-// const productos = document.querySelectorAll('.card-producto');
-// const labelFavorito = document.querySelectorAll('.cont-corazon');
-
+const contProductosTienda = document.querySelector('.cont-productos-tienda');
+const contDetallesTienda = document.querySelector('.cont-detalles-tienda');
+const verProductos = document.getElementById('verProductos');
+const verDetalles = document.getElementById('verDetalles');
 
 btnCategoria.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -9,6 +10,11 @@ btnCategoria.forEach((btn) => {
     });
 });
 
-// productos.forEach((btnFavoritoProducto, index) => {
-
-// });
+verProductos.addEventListener('click', () => {
+    contProductosTienda.style.display = 'flex';
+    contDetallesTienda.style.display = 'none';
+});
+verDetalles.addEventListener('click', () => {
+    contProductosTienda.style.display = 'none';
+    contDetallesTienda.style.display = 'flex';
+});

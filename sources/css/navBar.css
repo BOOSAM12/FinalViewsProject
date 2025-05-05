@@ -559,6 +559,14 @@ aside {
         padding: 2px 5px 1px 5px;
         margin: 0 20px 0 0;
     }
+    .icono-notificacion-view{
+        width: 40px;
+        height: 40px;
+    }
+    .icono-notificacion-view img{
+        width: 20px;
+        height: 20px;
+    }
     /*DISEÑO DEL NAV-BAR*/
     .nav-bar{
         height: 100vh;
@@ -580,6 +588,12 @@ aside {
     }
     .logo-nav-bar{
         width: 40px;
+    }
+        /*DISEÑO CONTENEDOR DE NOTIFICACIONES*/
+    .contenedor-notificaciones{
+        background-color: white;
+        width: 300px;
+        height: 200px;
     }
 }
 @media (width >= 720px) and (width <= 1280px){
