@@ -182,9 +182,13 @@ aside {
     transform: translateX(0);
     pointer-events: auto;
 }
+.container-links a{
+    text-decoration: none;
+}
 .container-links h3{
     text-align: center;
     width: 80%;
+    color: black;
 }
 .links{
     width: 80%;
