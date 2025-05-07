@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historial de pedidos</title>
+    <title>Perfil</title>
     <link rel="stylesheet" href="../../sources/css/navBar.css">
-    <link rel="stylesheet" href="../../sources/css/users/historialPedidos.css">
+    <link rel="stylesheet" href="../../sources/css/users/perfilUsuario.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet"></head>
+</head>
 <body>
     <header>
         <section class="bar-logo">
@@ -185,107 +186,99 @@
             </article>
         </section>
     </article>
-    <!-- ESTRUCTURA DEL CONTENEDOR DE PEDIDOS -->
     <main>
-        <section class="cont-aside-pedidos">
-            <article class="cont-info-usuario">
-                <section>
-                    <img src="../../sources/img/person-16.svg">
-                    <h2>Jhojan Rojas</h2>
-                </section>
-                <p>Dirección del usuario</p>
+        <section class="cont-aside-perfil">
+            <article class="cont-titulo-perfil">
+                <img src="../../sources/img/person-16.svg">
+                <h2>Mi cuenta</h2>
             </article>
-            <article class="aside-navBar">
+            <article class="aside-navBar-perfil">
                 <ul>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="#000000"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path  d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
-                        <a href="">Inicio</a>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-288-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM80 64l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16L80 96c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm16 96l192 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32L96 352c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32zm0 32l0 64 192 0 0-64L96 256zM240 416l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
-                        <a href="">Mis pedidos</a>
+                        <img src="../../sources/img/settings.svg" alt="" srcset="">
+                        <a href="">Ajustes de cuenta</a>
                     </li>
                 </ul>
             </article>
         </section>
         <!--CONTENODOR DE PEDIDOS-->
-        <section class="cont-pedidos">
-            <h2 class="tituloSecundario">Mis pedidos</h2>
-            <article class="cont-card-pedido">
-                <section class="cont-info-pedido">
-                    <h3>Nombre de la tienda</h3>
-                    <p id="infoProceso" class="info-proceso">Entregado</p>
-                </section>
-                <section class="cont-productos-pedido">
-                    <article class="producto-pedido">
-                        <img src="../../sources/img/rice-ball_.png" alt="Producto">
-                        <section>
-                            <p>Arroz ROA - Libra</p>
-                            <p>$5000.00</p>
-                        </section>
-                        <span>x1</span>
+        <section class="cont-config-opciones">
+            <h2 class="tituloSecundario">Ajustes de cuenta</h2>
+            <article class="cont-cards-config">
+                <section class="card-config">
+                    <article class="cont-titulo-card">
+                        <img src="../../sources/img/person.svg" alt="">
+                        <h3 class="tituloCard">Información Personal</h3>
                     </article>
-                    <article class="producto-pedido">
-                        <img src="../../sources/img/rice-ball_.png" alt="Producto">
-                        <section>
-                            <p>Arroz ROA - Libra</p>
-                            <p>$5000.00</p>
-                        </section>
-                        <span>x1</span>
-                    </article>
-                    <article class="producto-pedido">
-                        <img src="../../sources/img/rice-ball_.png" alt="Producto">
-                        <section>
-                            <p>Arroz ROA - Libra</p>
-                            <p>$5000.00</p>
-                        </section>
-                        <span>x1</span>
-                    </article>
+                    <p>Actualiza tu nombre, correo, telefono, y otra información básica de tu cuenta</p>
                 </section>
-                <section class="cont-total-pedido">
-                    <p>Total: $10.000.00</p>
-                    <p>Fecha: 01/01/2023</p>
-                    <p>Hora: 12:00 PM</p>
-                    <button type="submit" id="btnConfirmarPedido" class="btn-Confirmar-Pedido">Confirmar compra</button>
-                </section>
-            </article>
 
-            <article class="cont-card-pedido">
-                <section class="cont-info-pedido">
-                    <h3>Nombre de la tienda</h3>
-                    <p id="infoProceso" class="info-proceso">Cancelado</p>
-                </section>
-                <section class="cont-productos-pedido">
-                    <article class="producto-pedido">
-                        <img src="../../sources/img/rice-ball_.png" alt="Producto">
-                        <section>
-                            <p>Arroz ROA - Libra</p>
-                            <p>$5000.00</p>
-                        </section>
-                        <span>x1</span>
+                <section class="card-config">
+                    <article class="cont-titulo-card">
+                        <img src="../../sources/img/lock.svg" alt="">
+                        <h3 class="tituloCard">Seguridad</h3>
                     </article>
-                    <article class="producto-pedido">
-                        <img src="../../sources/img/rice-ball_.png" alt="Producto">
-                        <section>
-                            <p>Arroz ROA - Libra</p>
-                            <p>$5000.00</p>
-                        </section>
-                        <span>x1</span>
-                    </article>
+                    <p>Cambia tu contraseña</p>
                 </section>
-                <section class="cont-total-pedido">
-                    <p>Total: $10.000.00</p>
-                    <p>Fecha: 01/01/2023</p>
-                    <p>Hora: 12:00 PM</p>
-                    <button type="submit" id="btnConfirmarPedido" class="btn-Confirmar-Pedido">Confirmar compra</button>
+
+                <section class="card-config">
+                    <article class="cont-titulo-card">
+                        <img src="../../sources/img/logo-v1.1.png" alt="">
+                        <h3 class="tituloCard">Tu tienda</h3>
+                    </article>
+                    <p>Actualiza los datos referentes a tu tienda</p>
                 </section>
             </article>
-            
+        </section>
+        <!--CONTENEDOR PARA EDITAR LA INFORMACIÓN PERSONAL-->
+        <section class="cont-form-personal">
+            <section class="cont-titulo-personal">
+                <article class="titulo-personal">
+                    <img src="../../sources/img/person.svg" alt="">
+                    <h3 class="tituloCard">Información Personal</h3>
+                </article>
+                <p>Actualiza tu información personal para mantener tu cuenta al día. Esta información nos ayuda a brindarte un mejor servicio.</p>
+            </section>
+            <legend>Datos personales</legend>
+            <form action="">
+                <article class="cont-inputs">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" placeholder="" required>
+                </article>
+
+                <article class="cont-inputs">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" placeholder="" required>
+                </article>
+
+                <article class="cont-inputs">
+                    <label for="telefono">Telefono</label>
+                    <input type="number" id="telefono" placeholder="" required>
+                </article>
+
+                <article class="cont-inputs">
+                    <label for="fecha">Fecha de nacimiento</label>
+                    <input type="date" id="fecha" placeholder="" required>
+                </article>
+
+                <article class="cont-inputs">
+                    <label for="direccion">Dirección Principal</label>
+                    <input type="text" id="direccion" placeholder="" required>
+                </article>
+
+                <article class="cont-inputs">
+                    <label for="barrio">Barrio</label>
+                    <input type="text" id="barrio" placeholder="" required>
+                </article>
+                <article class="cont-btn-form">
+                    <input type="submit" value="Cancelar">
+                    <input type="submit" value="Guardar Cambios">
+                </article>
+            </form>
         </section>
     </main>
     <script src="../../sources/js/nav-bar.js"></script>
     <script src="../../sources/js/carrito.js"></script>
     <script src="../../sources/js/notificaciones.js"></script>
-    <script src="../../sources/js/historialPedidos.js"></script>
 </body>
 </html>

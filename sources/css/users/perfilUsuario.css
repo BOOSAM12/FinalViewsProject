@@ -1,0 +1,202 @@
+:root{
+    --color-primario: #7400C4;
+    --color-secundario: #E88BFF;
+    --color-terciario: #3F1650;
+    --color-cuarto: #270D32;
+    --color-quinto: #DDBFE3;
+    --color-sexto: #62238D;
+    --color-negro: #000000;
+    --color-borde-claro:#999999;
+    --color-text1:#757575;
+    --color-text2:#B032E7;
+    --color-text3: #9A9898;
+    --tamaño-icono1: 8px;
+    --tamaño-icono2: 16px;
+    --tamaño-icono3: 32px;
+    --tamaño-icono4: 48px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "ADLaM Display", serif;
+    font-weight: 300;
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+
+}
+html{
+    height: 100vh;
+}
+body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+main{
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+/*CONTENEDOR DEL ASIDE DE PERFIL*/
+.cont-aside-perfil{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 22%;
+    height: 30%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
+}
+.cont-titulo-perfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    border-bottom: 2px solid var(--color-borde-claro);
+}
+.cont-titulo-perfil h2{
+    font-size: 1.2rem;
+    color: var(--color-primario);
+}
+.aside-navBar-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+.aside-navBar-perfil ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+.aside-navBar-perfil ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+.aside-navBar-perfil ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+    text-decoration: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+.aside-navBar-perfil ul img{
+    width: var(--tamaño-icono3);
+    height: var(--tamaño-icono3);
+}
+.aside-navBar-perfil ul li:hover {
+    background-color: var(--color-sexto);
+    color: white;
+}
+.aside-navBar-perfil ul li:hover a{
+    color: white;
+}
+/*CONTENEDOR DE OPCIONES*/
+.cont-config-opciones{
+    border-radius: 15px;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 70%;
+    height: 90%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
+    padding: 20px;
+    overflow-y: auto;
+}
+.tituloSecundario{
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.cont-cards-config{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+    gap: 20px;
+}
+.card-config{
+    width: 45%;
+    height: 120px;
+    border-radius: 15px;
+    border:  1px solid var(--color-borde-claro);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.cont-titulo-card{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    width: 100%;
+    height: 50%;
+}
+.cont-titulo-card img{
+    width: 30px;
+    height: 25px ;
+}
+.card-config p{
+    height: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--color-text1);
+}
+.card-config:hover{
+    scale: 1.02;
+    border: 1px solid var(--color-primario);
+}
+.card-config:hover h3{
+    color:  var(--color-primario);
+}
+
+/*CONTENEDOR DE FORMULARIO INFORMACION PERSONAL*/
+.cont-form-personal{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 70%;
+    height: 90%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
+    padding: 20px;
+    overflow-y: auto;
+}
