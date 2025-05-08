@@ -47,13 +47,17 @@ main{
 }
 
 /*CONTENEDOR DEL ASIDE DE PERFIL*/
+.container-aside{
+    width: 22%;
+    height: 90%;
+}
 .cont-aside-perfil{
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    width: 22%;
+    width: 100%;
     height: 30%;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
 }
@@ -190,13 +194,202 @@ main{
 /*CONTENEDOR DE FORMULARIO INFORMACION PERSONAL*/
 .cont-form-personal{
     border-radius: 15px;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    width: 70%;
+    width: 60%;
     height: 90%;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
     padding: 20px;
     overflow-y: auto;
+}
+.cont-titulo-personal{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 20%;
+}
+.titulo-personal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.2em;
+}
+.titulo-personal img{
+    width: 24px;
+    height: 24px ;
+}
+.cont-titulo-personal p{
+    font-size: .8em;
+    color: var(--color-text1);
+}
+.subTitutlo{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--color-sexto);
+}
+.cont-form-personal form{
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(4, 1fr);
+    place-items: center;
+    place-content: center;
+    width: 100%;
+    height: 80%;
+    gap: 20px;
+    border-top: 1px solid var(--color-borde-claro);
+}
+.cont-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+.cont-inputs label{
+    font-size: .8em;
+}
+.cont-inputs input{
+    width: 100%;
+    font-size: .8em;
+    padding: 3px;
+    border: 1px solid var(--color-borde-claro);
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+.cont-inputs input:focus{
+    outline: 2px solid var(--color-primario);
+    border: none;
+}
+.cont-btn-form{
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    gap: 10px;
+}
+.btn-cancelar{
+    width: 18%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: .8em;
+    font-weight: 100;
+    border: 1px solid var(--color-borde-claro);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.btn-cancelar:hover{
+    background-color: red;
+    color: white;
+    border: none;
+}
+.btn-guardar{
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: var(--color-sexto);
+    color: white;
+    font-size: .8em;
+    font-weight: 100;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.btn-guardar:hover{
+    background-color: #09f;
+    color: white;
+}
+/*CONTENEDOR PARA EDITAR LA INFORMACIÓN PERSONAL*/
+.container-form-seguridad{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 60%;
+    height: 90%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
+    padding: 20px;
+    overflow-y: auto;
+}
+.cont-confirmacion-formulario{
+    width: 100%;
+    background-color: rgb(214, 212, 212);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    border-radius: 15px;
+}
+.cont-confirmacion-formulario img{
+    width: var(--tamaño-icono3);
+    height: var(--tamaño-icono3);
+}
+.titulo-confirmacion p{
+    font-size: .8em;
+    color: var(--color-text3);
+
+}
+.container-form-seguridad form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+.cont-inputs-contrasena{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+.cont-inputs-contrasena label{
+    font-size: .8em;
+}
+.cont-inputs-contrasena input{
+    width: 100%;
+    font-size: .9em;
+    padding: 5px;
+    border: 1px solid var(--color-borde-claro);
+    transition: all 0.1s ease;
+    border-radius: 5px;
+    &:focus{
+        outline: 1px solid var(--color-primario);
+        border: none;
+    }
+    &::placeholder{
+        color: var(--color-text1);
+        font-size: .8em;
+    }
+}
+.cont-inputs-contrasena:nth-child(2) p{
+    font-size: .8em;
+    color: var(--color-text3);
+}
+.cont-progreso{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+.cont-progreso div{
+    width: 24%;
+    height: 10px;
+    background-color: rgb(206, 202, 202);
+    border-radius: 5px;
 }

@@ -187,19 +187,21 @@
         </section>
     </article>
     <main>
-        <section class="cont-aside-perfil">
-            <article class="cont-titulo-perfil">
-                <img src="../../sources/img/person-16.svg">
-                <h2>Mi cuenta</h2>
-            </article>
-            <article class="aside-navBar-perfil">
-                <ul>
-                    <li>
-                        <img src="../../sources/img/settings.svg" alt="" srcset="">
-                        <a href="">Ajustes de cuenta</a>
-                    </li>
-                </ul>
-            </article>
+        <section class="container-aside">
+            <section class="cont-aside-perfil">
+                <article class="cont-titulo-perfil">
+                    <img src="../../sources/img/person-16.svg">
+                    <h2>Mi cuenta</h2>
+                </article>
+                <article class="aside-navBar-perfil">
+                    <ul>
+                        <li>
+                            <img src="../../sources/img/settings.svg" alt="" srcset="">
+                            <a href="">Ajustes de cuenta</a>
+                        </li>
+                    </ul>
+                </article>
+            </section>    
         </section>
         <!--CONTENODOR DE PEDIDOS-->
         <section class="cont-config-opciones">
@@ -239,7 +241,7 @@
                 </article>
                 <p>Actualiza tu información personal para mantener tu cuenta al día. Esta información nos ayuda a brindarte un mejor servicio.</p>
             </section>
-            <legend>Datos personales</legend>
+            <h3 class="subTitutlo">Datos personales</h3>
             <form action="">
                 <article class="cont-inputs">
                     <label for="nombre">Nombre Completo</label>
@@ -271,8 +273,51 @@
                     <input type="text" id="barrio" placeholder="" required>
                 </article>
                 <article class="cont-btn-form">
-                    <input type="submit" value="Cancelar">
-                    <input type="submit" value="Guardar Cambios">
+                    <input type="submit" value="Cancelar" class="btn-cancelar">
+                    <input type="submit" value="Guardar Cambios" class="btn-guardar">
+                </article>
+            </form>
+        </section>
+        <!--CONTENEDOR PARA EDITAR LA INFORMACIÓN PERSONAL-->
+        <section class="container-form-seguridad">
+            <article class="cont-titulo-personal">
+                <article class="titulo-personal">
+                    <img src="../../sources/img/lock.svg" alt="">
+                    <h3 class="tituloCard">Información Personal</h3>
+                </article>
+                <p>Gestiona la configuración de seguridad de tu cuenta para mantener tu información protegida.</p>
+            </article>
+            <article class="cont-confirmacion-formulario">
+                <img src="../../sources/img/verified.svg" alt="">
+                <article class="titulo-confirmacion">
+                    <h3 class="tituloConfirmación">Tu cuenta esta protegida</h3>
+                    <p>Has completado las recomendaciones de seguridad.</p>
+                </article>
+            </article>
+            <h3 class="subTitutlo">Cambiar Contraseña</h3>
+            <form action="">
+                <article class="cont-inputs-contrasena">
+                    <label for="contrasenaActual">Contraseña actual</label>
+                    <input type="text" id="contrasenaActual" placeholder="Ingresa tu contraseña actual" required>
+                </article>
+                <article class="cont-inputs-contrasena">
+                    <label for="contrasenaNueva">Nueva contraseña</label>
+                    <input type="text" id="contrasenaNueva" placeholder="Ingresa su contraseña nueva" required>
+                    <section class="cont-progreso">
+                        <div class="progreso1"></div>
+                        <div class="progreso2"></div>
+                        <div class="progreso3"></div>
+                        <div class="progreso4"></div>
+                    </section>
+                    <p>Débil - Utiliza minimo 8 caracteres con números y simbolos</p>
+                </article>
+                <article class="cont-inputs-contrasena">
+                    <label for="confirmarContrasena">Confirmar nueva contraseña</label>
+                    <input type="text" id="confirmarContrasena" placeholder="Confirma  tu nueva contraseña" required>
+                </article>
+                <article class="cont-btn-form">
+                    <input type="submit" value="Cancelar" class="btn-cancelar">
+                    <input type="submit" value="Actualizar contraseña" class="btn-guardar">
                 </article>
             </form>
         </section>
