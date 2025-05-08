@@ -1,5 +1,6 @@
-const passwordInput = document.getElementById('passwordInput');
-const bars = document.querySelectorAll('.bar');
+const contrasenaInput = document.getElementById('contrasenaNueva');
+const bars = document.querySelectorAll('.progreso');
+const infoDebilidad = document.getElementById('infoDebilidad');
 const reqs = {
   length: document.getElementById('req-length'),
   uppercase: document.getElementById('req-uppercase'),
