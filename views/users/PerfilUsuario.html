@@ -278,12 +278,12 @@
                 </article>
             </form>
         </section>
-        <!--CONTENEDOR PARA EDITAR LA INFORMACIÓN PERSONAL-->
+        <!--CONTENEDOR PARA EDITAR LA CONTRASEÑA-->
         <section class="container-form-seguridad">
             <article class="cont-titulo-personal">
                 <article class="titulo-personal">
                     <img src="../../sources/img/lock.svg" alt="">
-                    <h3 class="tituloCard">Información Personal</h3>
+                    <h3 class="tituloCard">Seguridad</h3>
                 </article>
                 <p>Gestiona la configuración de seguridad de tu cuenta para mantener tu información protegida.</p>
             </article>
@@ -309,15 +309,15 @@
                         <div class="progreso"></div>
                         <div class="progreso"></div>
                     </section>
-                    <p id="infoDebilidad">Débil - Utiliza minimo 8 caracteres con números y simbolos</p>
+                    <p id="infoDebilidad"></p>
                 </article>
                 <article class="cont-inputs-contrasena">
                     <label for="confirmarContrasena">Confirmar nueva contraseña</label>
                     <input type="text" id="confirmarContrasena" placeholder="Confirma  tu nueva contraseña" required>
                 </article>
                 <article class="cont-btn-form">
-                    <input type="submit" value="Cancelar" class="btn-cancelar">
-                    <input type="submit" value="Actualizar contraseña" class="btn-guardar">
+                    <input type="submit" value="Cancelar" class="btn-cancelar" id="btnCancelarContrasena">
+                    <input type="submit" value="Actualizar contraseña" class="btn-guardar" id="btnActualizarContrasena">
                 </article>
             </form>
         </section>
@@ -325,5 +325,6 @@
     <script src="../../sources/js/nav-bar.js"></script>
     <script src="../../sources/js/carrito.js"></script>
     <script src="../../sources/js/notificaciones.js"></script>
+    <script src="../../sources/js/perfilUsuario.js"></script>
 </body>
 </html>

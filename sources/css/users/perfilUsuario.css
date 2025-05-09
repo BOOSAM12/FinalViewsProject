@@ -325,7 +325,7 @@ main{
 .cont-confirmacion-formulario{
     width: 100%;
     background-color: rgb(214, 212, 212);
-    display: flex;
+    display: none;
     justify-content: start;
     align-items: center;
     padding: 15px;
