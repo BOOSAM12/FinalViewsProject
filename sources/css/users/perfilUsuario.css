@@ -393,3 +393,59 @@ main{
     background-color: rgb(206, 202, 202);
     border-radius: 5px;
 }
+
+/*DISEÑO DEL MODAL*/
+#modelaCencelar{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 200px;
+    background: white;
+    border-radius: 15px;
+    z-index: 99;
+    border: none;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
+    
+}
+#modelaCencelar h3{
+    font-size: 1.2rem;
+    color: black;
+}
+.cont-info-modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.cont-btn-modal{
+    margin-top: 20px;
+}
+.cont-btn-modal button{
+    padding: 8px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cont-btn-modal button:nth-child(1){
+    background-color: var(--color-sexto);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+.cont-btn-modal button:nth-child(2){
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    color: black;
+    border: 1px solid black;
+}
+.cont-btn-modal button:nth-child(1):hover{
+    translate: 0 -8px;
+}
+.cont-btn-modal button:nth-child(2):hover{
+    translate: 0 -8px;
+}

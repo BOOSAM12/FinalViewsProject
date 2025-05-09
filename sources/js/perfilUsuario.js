@@ -1,3 +1,22 @@
+const contenedorPrincipalPerfil =  document.querySelector('.cont-config-opciones');
+const contenedorInformacionPersonal =  document.querySelector('.cont-form-personal');
+const modal = document.getElementById('modelaCencelar');
+const btnCancelarFormulario = document.getElementById('btnCancelarContrasena');
+const btnCancelarModal = document.getElementById('btnCancelarModal');
+const btnAceptarModal = document.getElementById('btnAceptarModal');
+
+btnCancelarFormulario.addEventListener('click', function() {
+  modal.showModal();
+});
+
+btnCancelarModal.addEventListener('click', function() {
+  modal.close();
+});
+btnAceptarModal.addEventListener('click', function() {
+  modal.close();
+});
+
+//VERIFICAR SI EL CONTENEDOR DEL FORMULARIO ESTA PRESENTE EN EL VIEWPORT
 const contenedorPrincipalContrasena =  document.querySelector('.container-form-seguridad');
 if(contenedorPrincipalContrasena.offsetParent !== null){
   const btnActualizarContrasena = document.getElementById('btnActualizarContrasena');
@@ -7,11 +26,15 @@ if(contenedorPrincipalContrasena.offsetParent !== null){
     mostrarRecuperarContrasena();
   });
 }
+
+
 //FUNCION PARA MOSTRAR RECUADRO DE CONFIRMACION DE ACTULIZACIÓN DE CONTRASEÑA
 function mostrarRecuperarContrasena() {
   const confirmacionFormulario = document.querySelector('.cont-confirmacion-formulario');
   confirmacionFormulario.style.display = 'flex';
 }
+
+
 //FUNCION PARA VALIDAR LA SEGURIDAD DE LA CONTRASEÑNA EN EL CONTENEDOR DEL FORMULARIO CORRESPONDIENTE
 function validarContrasena(){
   const contrasenaInput = document.getElementById('contrasenaNueva');
@@ -47,7 +70,7 @@ function validarContrasena(){
     });
 
     // Actualizar texto
-    infoDebilidad.textContent = mensajes[metCount - 1] || "Muy débil - Utiliza mínimo 8";
+    infoDebilidad.textContent = mensajes[metCount - 1] || "Muy débil - Utiliza mínimo 8 caracteres";
   });
 
 }

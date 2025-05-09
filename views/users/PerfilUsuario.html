@@ -316,10 +316,19 @@
                     <input type="text" id="confirmarContrasena" placeholder="Confirma  tu nueva contraseña" required>
                 </article>
                 <article class="cont-btn-form">
-                    <input type="submit" value="Cancelar" class="btn-cancelar" id="btnCancelarContrasena">
+                    <button class="btn-cancelar" id="btnCancelarContrasena">Cancelar</button>
                     <input type="submit" value="Actualizar contraseña" class="btn-guardar" id="btnActualizarContrasena">
                 </article>
             </form>
+            <dialog id="modelaCencelar" closedby="any">
+                <article class="cont-info-modal">
+                    <h3>¿Estas seguro que quieres cancelar esta acción?</h3>
+                    <section class="cont-btn-modal">
+                        <button id="btnCancelarModal">Cancelar</button>
+                        <button id="btnAceptarModal">Aceptar</button>
+                    </section>
+                </article>
+            </dialog>
         </section>
     </main>
     <script src="../../sources/js/nav-bar.js"></script>
