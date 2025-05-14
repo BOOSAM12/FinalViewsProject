@@ -126,7 +126,7 @@ main{
 /*CONTENEDOR DE OPCIONES*/
 .cont-config-opciones{
     border-radius: 15px;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: start;
@@ -261,7 +261,7 @@ main{
     font-size: .8em;
     padding: 3px;
     border: 1px solid var(--color-borde-claro);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
     border-radius: 5px;
 }
 .cont-inputs input:focus{
@@ -309,10 +309,10 @@ main{
     background-color: #09f;
     color: white;
 }
-/*CONTENEDOR PARA EDITAR LA INFORMACIÓN PERSONAL*/
+/*CONTENEDOR PARA EDITAR SEGURIDAD*/
 .container-form-seguridad{
     border-radius: 15px;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: start;
     justify-content: start;
@@ -395,7 +395,7 @@ main{
 }
 
 /*DISEÑO DEL MODAL*/
-#modelaCencelar{
+#modalCencelar{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -410,7 +410,7 @@ main{
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
     
 }
-#modelaCencelar h3{
+#modalCencelar h3{
     font-size: 1.2rem;
     color: black;
 }

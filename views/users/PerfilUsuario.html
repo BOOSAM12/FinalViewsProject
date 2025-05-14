@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../../sources/css/users/perfilUsuario.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <header>
@@ -187,27 +188,28 @@
         </section>
     </article>
     <main>
-        <section class="container-aside">
+        <section class="container-aside animate__animated  animate__fadeInDown">
             <section class="cont-aside-perfil">
                 <article class="cont-titulo-perfil">
                     <img src="../../sources/img/person-16.svg">
                     <h2>Mi cuenta</h2>
                 </article>
                 <article class="aside-navBar-perfil">
-                    <ul>
+                    <ul id="btnAjusteCuenta">
                         <li>
                             <img src="../../sources/img/settings.svg" alt="" srcset="">
-                            <a href="">Ajustes de cuenta</a>
+                            <a>Ajustes de cuenta</a>
                         </li>
                     </ul>
                 </article>
             </section>    
         </section>
-        <!--CONTENODOR DE PEDIDOS-->
-        <section class="cont-config-opciones">
+        <!--CONTENODOR DE AJUSTES-->
+        <section class="cont-config-opciones animate__animated  animate__fadeInRight" >
             <h2 class="tituloSecundario">Ajustes de cuenta</h2>
-            <article class="cont-cards-config">
-                <section class="card-config">
+
+            <article class="cont-cards-config" >
+                <section class="card-config" id="abrirContInfoPersonal">
                     <article class="cont-titulo-card">
                         <img src="../../sources/img/person.svg" alt="">
                         <h3 class="tituloCard">Información Personal</h3>
@@ -215,7 +217,7 @@
                     <p>Actualiza tu nombre, correo, telefono, y otra información básica de tu cuenta</p>
                 </section>
 
-                <section class="card-config">
+                <section class="card-config" id="abrirContSeguridad">
                     <article class="cont-titulo-card">
                         <img src="../../sources/img/lock.svg" alt="">
                         <h3 class="tituloCard">Seguridad</h3>
@@ -233,7 +235,7 @@
             </article>
         </section>
         <!--CONTENEDOR PARA EDITAR LA INFORMACIÓN PERSONAL-->
-        <section class="cont-form-personal">
+        <section class="cont-form-personal animate__animated  animate__fadeInRight">
             <section class="cont-titulo-personal">
                 <article class="titulo-personal">
                     <img src="../../sources/img/person.svg" alt="">
@@ -245,41 +247,41 @@
             <form action="">
                 <article class="cont-inputs">
                     <label for="nombre">Nombre Completo</label>
-                    <input type="text" id="nombre" placeholder="" required>
+                    <input type="text" id="nombre" placeholder="" >
                 </article>
 
                 <article class="cont-inputs">
                     <label for="correo">Correo Electrónico</label>
-                    <input type="email" id="correo" placeholder="" required>
+                    <input type="email" id="correo" placeholder="" >
                 </article>
 
                 <article class="cont-inputs">
                     <label for="telefono">Telefono</label>
-                    <input type="number" id="telefono" placeholder="" required>
+                    <input type="number" id="telefono" placeholder="" >
                 </article>
 
                 <article class="cont-inputs">
                     <label for="fecha">Fecha de nacimiento</label>
-                    <input type="date" id="fecha" placeholder="" required>
+                    <input type="date" id="fecha" placeholder="" >
                 </article>
 
                 <article class="cont-inputs">
                     <label for="direccion">Dirección Principal</label>
-                    <input type="text" id="direccion" placeholder="" required>
+                    <input type="text" id="direccion" placeholder="" >
                 </article>
 
                 <article class="cont-inputs">
                     <label for="barrio">Barrio</label>
-                    <input type="text" id="barrio" placeholder="" required>
+                    <input type="text" id="barrio" placeholder="" >
                 </article>
                 <article class="cont-btn-form">
-                    <input type="submit" value="Cancelar" class="btn-cancelar">
+                    <button type="button" class="btn-cancelar" id="btnCancelarInfoPersonal">Cancelar</button>
                     <input type="submit" value="Guardar Cambios" class="btn-guardar">
                 </article>
             </form>
         </section>
         <!--CONTENEDOR PARA EDITAR LA CONTRASEÑA-->
-        <section class="container-form-seguridad">
+        <section class="container-form-seguridad animate__animated  animate__fadeInRight">
             <article class="cont-titulo-personal">
                 <article class="titulo-personal">
                     <img src="../../sources/img/lock.svg" alt="">
@@ -298,11 +300,11 @@
             <form action="">
                 <article class="cont-inputs-contrasena">
                     <label for="contrasenaActual">Contraseña actual</label>
-                    <input type="text" id="contrasenaActual" placeholder="Ingresa tu contraseña actual" required>
+                    <input type="text" id="contrasenaActual" placeholder="Ingresa tu contraseña actual">
                 </article>
                 <article class="cont-inputs-contrasena">
                     <label for="contrasenaNueva">Nueva contraseña</label>
-                    <input type="text" id="contrasenaNueva" placeholder="Ingresa su contraseña nueva" required>
+                    <input type="text" id="contrasenaNueva" placeholder="Ingresa su contraseña nueva">
                     <section class="cont-progreso">
                         <div class="progreso"></div>
                         <div class="progreso"></div>
@@ -313,23 +315,24 @@
                 </article>
                 <article class="cont-inputs-contrasena">
                     <label for="confirmarContrasena">Confirmar nueva contraseña</label>
-                    <input type="text" id="confirmarContrasena" placeholder="Confirma  tu nueva contraseña" required>
+                    <input type="text" id="confirmarContrasena" placeholder="Confirma  tu nueva contraseña">
                 </article>
                 <article class="cont-btn-form">
-                    <button class="btn-cancelar" id="btnCancelarContrasena">Cancelar</button>
+                    <button type="button" class="btn-cancelar" id="btnCancelarContrasena">Cancelar</button>
                     <input type="submit" value="Actualizar contraseña" class="btn-guardar" id="btnActualizarContrasena">
                 </article>
             </form>
-            <dialog id="modelaCencelar" closedby="any">
-                <article class="cont-info-modal">
-                    <h3>¿Estas seguro que quieres cancelar esta acción?</h3>
-                    <section class="cont-btn-modal">
-                        <button id="btnCancelarModal">Cancelar</button>
-                        <button id="btnAceptarModal">Aceptar</button>
-                    </section>
-                </article>
-            </dialog>
+
         </section>
+        <dialog id="modalCencelar" closedby="any">
+            <article class="cont-info-modal">
+                <h3>¿Estas seguro que quieres cancelar esta acción?</h3>
+                <section class="cont-btn-modal">
+                    <button id="btnCancelarModal">Cancelar</button>
+                    <button id="btnAceptarModal">Aceptar</button>
+                </section>
+            </article>
+        </dialog>
     </main>
     <script src="../../sources/js/nav-bar.js"></script>
     <script src="../../sources/js/carrito.js"></script>
