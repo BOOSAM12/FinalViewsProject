@@ -324,6 +324,279 @@
             </form>
 
         </section>
+        <!--CONTENEDOR PARA EDITAR LA TIENDA-->
+        <section class="container-info-tienda">
+            <article class="cont-encabezado-tienda">
+                <section>
+                    <img src="../../sources/img/logo-v1.1.png" alt="">
+                    <h3 class="tituloEncabezado">Tu tienda</h3>
+                </section>
+                <p class="parrafoEncabezado">Actualiza la información de tu tienda para que tus clientes puedan conocerte mejor y hacer pedidos fácilmente.</p>
+            </article>
+            <article class="mini-nav-tienda">
+                <ul>
+                    <li class="btn-tienda activeInfoTienda" id="btnInfoBasica">Información básica</li>
+                    <li class="btn-tienda" id="btnDatosEnvio">Horarios</li>
+                    <li class="btn-tienda" id="btnDatosPago">Métodos de pago</li>
+                </ul>
+            </article>
+            <article class="cont-vista-previa">
+                <section class="encabezado-vista-previa">
+                    <h4>Vista previa de tú tienda</h4>
+                </section>
+                <section class="cont-info-tienda">
+                    <article class="cont-img-tienda">
+                        <img src="../../sources/img/slider-1.jpg" alt="">
+                        <section class="info-img">
+                            <h3 class="nombreTienda">Nombre de la tienda</h3>
+                            <p class="descripcionTienda">Descripción de la tienda</p>
+                        </section>
+                    </article>
+                    <article class="cont-datos">
+                        <section class="dato">
+                            <h4>Dirección</h4>
+                            <p>Dirección de la tienda</p>
+                        </section>
+                        <section class="dato">
+                            <h4>Horario</h4>
+                            <p>Lunes - Sabado 8:00 a.m - 8:00 p.m</p>
+                        </section>
+                        <section class="dato">
+                            <h4>Telefono</h4>
+                            <p>+57 xxx xxx xxxx</p>
+                        </section>
+                    </article>
+                </section>
+            </article>
+            <!--CONTENEDOR FORMULARIO DE DATOS BASICOS-->
+            <article class="cont-formulario-basico">
+                <h3 class="subTituloTienda">Datos de la tienda</h3>
+                <form action="" class="formulario-tienda-datos">
+                    <section class="cont-inputs-tienda">
+                        <label for="nombreTienda">Nombre de la tienda</label>
+                        <input type="text" id="nombreTienda" placeholder="">
+                    </section>
+                    <section class="cont-inputs-tienda">
+                        <label for="categoriaPrincipal">Categoria principal</label>
+                        <select name="" id="">
+                            <option value="">Selecciona una categoria</option>
+                            <option value="">Comida</option>
+                            <option value="">Bebidas</option>
+                            <option value="">Aseo</option>
+                            <option value="">Otros</option>
+                        </select>
+                    </section>
+                    <section class="cont-inputs-tienda">
+                        <label for="telefonoTienda">Teléfono</label>
+                        <input type="text" id="telefonoTienda" placeholder="">
+                    </section>
+                    <section class="cont-inputs-tienda">
+                        <label for="correoTienda">Correo electrónico</label>
+                        <input type="text" id="correoTienda" placeholder="">
+                    </section>
+                    <section class="cont-inputs-tienda">
+                        <label for="descripcionTienda">Descripción</label>
+                        <textarea name="" id="descripcionTienda" cols="30" rows="10" placeholder=""></textarea>
+                    </section>
+                    <section class="cont-inputs-tienda">
+                        <label for="direccionTienda">Dirección</label>
+                        <input type="text" id="direccionTienda" placeholder="">
+                    </section>
+                    <section class="cont-inputs-tienda">
+                        <label for="barrioTienda">Barrio</label>
+                        <input type="text" id="barrioTienda" placeholder="">
+                    </section>
+                    <section class="cont-btn-form">
+                        <button type="button" class="btn-cancelar" id="btnCancelarInfoTienda">Cancelar</button>
+                        <input type="submit" value="Guardar Cambios" class="btn-guardar">
+                    </section>
+                </form>
+            </article>
+            <!--CONTENEDOR FORMULARIO DE HORARIOS-->
+            <article class="cont-formulario-horarios">
+                <h3 class="subTituloTienda">Configura tus horarios de atención</h3>
+                <form action="" class="formulario-tienda-horarios">
+                    <section class="cont-checkbox">
+                        <label for="checkboxLunes">Lunes</label>
+                        <input type="checkbox" id="checkboxLunes" class="checkbox">
+                        <article class="cont-select">
+                            <select name="" id="">
+                                <option value="">8:00 a.m</option>
+                                <option value="">9:00 a.m</option>
+                                <option value="">10:00 a.m</option>
+                            </select>
+                            <span>a</span>
+                            <select name="" id="">
+                                <option value="">8:00 p.m</option>
+                                <option value="">9:00 p.m</option>
+                                <option value="">10:00 p.m</option>
+                            </select>
+                        </article>
+                    </section>
+                    <section class="cont-checkbox">
+                        <label for="checkboxMartes">Martes</label>
+                        <input type="checkbox" id="checkboxMartes" class="checkbox">
+                        <article class="cont-select">
+                            <select name="" id="">
+                                <option value="">8:00 a.m</option>
+                                <option value="">9:00 a.m</option>
+                                <option value="">10:00 a.m</option>
+                            </select>
+                            <span>a</span>
+                            <select name="" id="">
+                                <option value="">8:00 p.m</option>
+                                <option value="">9:00 p.m</option>
+                                <option value="">10:00 p.m</option>
+                            </select>
+                        </article>
+                    </section>
+                    <section class="cont-checkbox">
+                        <label for="checkboxMiercoles">Miercoles</label>
+                        <input type="checkbox" id="checkboxMiercoles" class="checkbox">
+                        <article class="cont-select">
+                            <select name="" id="">
+                                <option value="">8:00 a.m</option>
+                                <option value="">9:00 a.m</option>
+                                <option value="">10:00 a.m</option>
+                            </select>
+                            <span>a</span>
+                            <select name="" id="">
+                                <option value="">8:00 p.m</option>
+                                <option value="">9:00 p.m</option>
+                                <option value="">10:00 p.m</option>
+                            </select>
+                        </article>
+                    </section>
+                    <section class="cont-checkbox">
+                        <label for="checkboxJueves">Jueves</label>
+                        <input type="checkbox" id="checkboxJueves" class="checkbox">
+                        <article class="cont-select">
+                            <select name="" id="">
+                                <option value="">8:00 a.m</option>
+                                <option value="">9:00 a.m</option>
+                                <option value="">10:00 a.m</option>
+                            </select>
+                            <span>a</span>
+                            <select name="" id="">
+                                <option value="">8:00 p.m</option>
+                                <option value="">9:00 p.m</option>
+                                <option value="">10:00 p.m</option>
+                            </select>
+                        </article>
+                    </section>
+                    <section class="cont-checkbox">
+                        <label for="checkboxViernes">Viernes</label>
+                        <input type="checkbox" id="checkboxViernes" class="checkbox">
+                        <article class="cont-select">
+                            <select name="" id="">
+                                <option value="">8:00 a.m</option>
+                                <option value="">9:00 a.m</option>
+                                <option value="">10:00 a.m</option>
+                            </select>
+                            <span>a</span>
+                            <select name="" id="">
+                                <option value="">8:00 p.m</option>
+                                <option value="">9:00 p.m</option>
+                                <option value="">10:00 p.m</option>
+                            </select>
+                        </article>
+                    </section>
+                    <section class="cont-checkbox">
+                        <label for="checkboxSabado">Sabado</label>
+                        <input type="checkbox" id="checkboxSabado" class="checkbox">
+                        <article class="cont-select">
+                            <select name="" id="">
+                                <option value="">8:00 a.m</option>
+                                <option value="">9:00 a.m</option>
+                                <option value="">10:00 a.m</option>
+                            </select>
+                            <span>a</span>
+                            <select name="" id="">
+                                <option value="">8:00 p.m</option>
+                                <option value="">9:00 p.m</option>
+                                <option value="">10:00 p.m</option>
+                            </select>
+                        </article>
+                    </section>
+                    <section class="cont-checkbox">
+                        <label for="checkboxDomingo">Domingo</label>
+                        <input type="checkbox" id="checkboxDomingo" class="checkbox">
+                        <article class="cont-select">
+                            <select name="" id="">
+                                <option value="">8:00 a.m</option>
+                                <option value="">9:00 a.m</option>
+                                <option value="">10:00 a.m</option>
+                            </select>
+                            <span>a</span>
+                            <select name="" id="">                     
+                                <option value="">8:00 p.m</option>
+                                <option value="">9:00 p.m</option>
+                                <option value="">10:00 p.m</option>
+                            </select>
+                        </article>
+                    </section>
+                    <section class="cont-btn-form">
+                        <button type="button" class="btn-cancelar" id="btnCancelarHorarios">Cancelar</button>
+                        <input type="submit" value="Guardar Cambios" class="btn-guardar">
+                </form>
+            </article>
+            <!--CONTENEDOR FORMULARIO DE METODOS DE PAGO-->
+            <article class="cont-formulario-pago">
+                <h3 class="subTituloTienda">Configura Métodos de pago</h3>
+                <p>Selecciona los métodos de pago que aceptas en tu tienda para facilitar las compras de tus clientes. Los clientes podrán ver esta información antes de realizar un pedido.</p>
+                <p>Métodos disponibles</p><span>Selecciona los que aceptas</span>
+                <form action="" class="formulario-tienda-pago">
+                    <section class="cont-checkbox-pago">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M64 64C28.7 64 0 92.7 0 128L0 384c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L64 64zm64 320l-64 0 0-64c35.3 0 64 28.7 64 64zM64 192l0-64 64 0c0 35.3-28.7 64-64 64zM448 384c0-35.3 28.7-64 64-64l0 64-64 0zm64-192c-35.3 0-64-28.7-64-64l64 0 0 64zM176 256a112 112 0 1 1 224 0 112 112 0 1 1 -224 0zm76-48c0 9.7 6.9 17.7 16 19.6l0 48.4-4 0c-11 0-20 9-20 20s9 20 20 20l24 0 24 0c11 0 20-9 20-20s-9-20-20-20l-4 0 0-68c0-11-9-20-20-20l-16 0c-11 0-20 9-20 20z"/></svg>
+                        <article>
+                            <label for="checkboxEfectivo">Efectivo</label>
+                            <input type="checkbox" id="checkboxEfectivo" class="checkbox">
+                            <p>Pagos en persona con dinero en efectivo</p>
+                        </article>
+                    </section>
+
+                    <section class="cont-checkbox-pago">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M0 80C0 53.5 21.5 32 48 32l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48L0 80zM64 96l0 64 64 0 0-64L64 96zM0 336c0-26.5 21.5-48 48-48l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-96zm64 16l0 64 64 0 0-64-64 0zM304 32l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-96c0-26.5 21.5-48 48-48zm80 64l-64 0 0 64 64 0 0-64zM256 304c0-8.8 7.2-16 16-16l64 0c8.8 0 16 7.2 16 16s7.2 16 16 16l32 0c8.8 0 16-7.2 16-16s7.2-16 16-16s16 7.2 16 16l0 96c0 8.8-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s-7.2-16-16-16s-16 7.2-16 16l0 64c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-160zM368 480a16 16 0 1 1 0-32 16 16 0 1 1 0 32zm64 0a16 16 0 1 1 0-32 16 16 0 1 1 0 32z"/></svg>
+                        <article>
+                            <label for="checkboxTarjeta">Tarjeta de crédito/debito</label>
+                            <input type="checkbox" id="checkboxTarjeta" class="checkbox">
+                            <p>Pagos con tarjeta en persona</p>
+                        </article>
+                    </section>
+
+                    <section class="cont-checkbox-pago">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M0 80C0 53.5 21.5 32 48 32l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48L0 80zM64 96l0 64 64 0 0-64L64 96zM0 336c0-26.5 21.5-48 48-48l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-96zm64 16l0 64 64 0 0-64-64 0zM304 32l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-96c0-26.5 21.5-48 48-48zm80 64l-64 0 0 64 64 0 0-64zM256 304c0-8.8 7.2-16 16-16l64 0c8.8 0 16 7.2 16 16s7.2 16 16 16l32 0c8.8 0 16-7.2 16-16s7.2-16 16-16s16 7.2 16 16l0 96c0 8.8-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s-7.2-16-16-16s-16 7.2-16 16l0 64c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-160zM368 480a16 16 0 1 1 0-32 16 16 0 1 1 0 32zm64 0a16 16 0 1 1 0-32 16 16 0 1 1 0 32z"/></svg>
+                        <article>
+                            <label for="checkboxPagoMovil">Pago movil</label>
+                            <input type="checkbox" id="checkboxPagoMovil" class="checkbox">
+                            <p>Pagos con apps como Nequi, Daviplata, etc.</p>
+                        </article>
+                    </section>
+
+                    <section class="cont-checkbox-pago">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M64 32C28.7 32 0 60.7 0 96l0 32 576 0 0-32c0-35.3-28.7-64-64-64L64 32zM576 224L0 224 0 416c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-192zM112 352l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16z"/></svg>
+                        <article>
+                            <label for="checkboxTransferencia">Còdigos QR</label>
+                            <input type="checkbox" id="checkboxTransferencia" class="checkbox">
+                            <p>Pagos mediante escaneo de código QR</p>
+                        </article>
+                    </section>
+
+                    <section class="cont-checkbox-pago">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160l0 8c0 13.3 10.7 24 24 24l400 0c13.3 0 24-10.7 24-24l0-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224l-64 0 0 196.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512l448 0c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1L448 224l-64 0 0 192-40 0 0-192-64 0 0 192-48 0 0-192-64 0 0 192-40 0 0-192zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+                        <article>
+                            <label for="checkboxTransferencia">Transferencia bancaria</label>
+                            <input type="checkbox" id="checkboxTransferencia" class="checkbox">
+                            <p>Pagos mediante transferencia</p>
+                        </article>
+                    </section>
+                    <section class="cont-btn-form">
+                        <button type="button" class="btn-cancelar" id="btnCancelarPago">Cancelar</button>
+                        <input type="submit" value="Guardar Cambios" class="btn-guardar">
+                    </section>
+                </form>
+        </section>
         <dialog id="modalCencelar" closedby="any">
             <article class="cont-info-modal">
                 <h3>¿Estas seguro que quieres cancelar esta acción?</h3>

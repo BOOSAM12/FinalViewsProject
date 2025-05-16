@@ -126,7 +126,7 @@ main{
 /*CONTENEDOR DE OPCIONES*/
 .cont-config-opciones{
     border-radius: 15px;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: start;
     justify-content: start;
@@ -198,7 +198,7 @@ main{
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    width: 60%;
+    width: 70%;
     height: 90%;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
     padding: 20px;
@@ -277,7 +277,7 @@ main{
     gap: 10px;
 }
 .btn-cancelar{
-    width: 18%;
+    width: 50%;
     height: 30px;
     border-radius: 5px;
     background-color: white;
@@ -294,7 +294,7 @@ main{
     border: none;
 }
 .btn-guardar{
-    width: 20%;
+    width: 50%;
     height: 30px;
     border-radius: 5px;
     background-color: var(--color-sexto);
@@ -316,7 +316,7 @@ main{
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    width: 60%;
+    width: 70%;
     height: 90%;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
     padding: 20px;
@@ -393,7 +393,198 @@ main{
     background-color: rgb(206, 202, 202);
     border-radius: 5px;
 }
+/*DISEÑO DEL FORMULARIO PARA EDITAR LA  INFORMACIÓN DE LA TIENDA*/
+.container-info-tienda{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 70%;
+    height: 90%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
+    padding: 20px;
+    overflow-y: auto;
+}
+.cont-encabezado-tienda{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+}
+.cont-encabezado-tienda section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+.cont-encabezado-tienda img{
+    width: 60px;
+    height: var(--tamaño-icono4);
+}
+.tituloEncabezado{
+    font-size: 1.5em;
+}
+.cont-encabezado-tienda p{
+    font-size: .8em;
+    color: var(--color-text1);
+}
+.mini-nav-tienda{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    width: 100%;
+    height: 20%;
+    margin: 20px 0;
+}
+.mini-nav-tienda ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+.btn-tienda{
+    font-size: .9em;
+    color: var(--color-text1);
+    cursor: pointer;
+}
+.activeInfoTienda{
+    border-bottom: 2px solid var(--color-primario) ;
+    color: var(--color-primario);
+}
+/*CARD VISTA PREVIA DE LA TIENDA*/
+.cont-vista-previa{
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    border-left: 1px solid var(--color-borde-claro);
+    border-right: 1px solid var(--color-borde-claro);
+    border-bottom: 1px solid var(--color-borde-claro);
+}
+.encabezado-vista-previa{
+    width: 100%;
+    background-color: var(--color-sexto);
+    padding: 5px 10px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border: none;
+    color: white;
+    font-size: .9em;
+}
+.cont-info-tienda{
+    padding: 10px 30px;
+}
+.cont-img-tienda{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    gap: 20px;
+}
+.cont-img-tienda img{
+    width: 150px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 10px;
+}
+.info-img{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 30px;
+}
+.nombreTienda{
+    font-size: 1.2em;
+}
+.descripcionTienda{
+    font-size: .9em;
+    color: var(--color-text3);
+}
+.cont-datos{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.dato h4{
+    font-size: .7em;
+    color: var(--color-text3);
+}
 
+/*CONTENEDOR FORMULARIO DE DATOS BASICOS*/
+.cont-formulario-basico{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.subTituloTienda{
+    color: var(--color-primario);
+    font-size: 1.2em;
+}
+.formulario-tienda-datos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60px 60px 100px 60px auto;
+    gap: 20px;
+    place-content: center;
+}
+.cont-inputs-tienda{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+}
+.cont-inputs-tienda input, .cont-inputs-tienda select, .cont-inputs-tienda textarea{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--color-borde-claro);
+    border-radius: 5px;
+    resize: none;
+    &:focus{
+        outline: 2px solid var(--color-sexto);
+        border: none;
+    }
+}
+.cont-inputs-tienda label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8em;
+}
+.cont-inputs-tienda:nth-child(5){
+    grid-column: 1/4;
+}
+.cont-btn-form {
+    width: 100%;
+    grid-column: 3/4;
+    grid-row: 5/6;
+}
+
+/*CONTENEDOR FORMULARIO DE HORARIOS*/
+.cont-formulario-horarios{
+    display: none;
+}
+
+/*CONTENEDOR FORMULARIO DE METODOS DE PAGO*/
+.cont-formulario-pago{
+    display: none;
+}
 /*DISEÑO DEL MODAL*/
 #modalCencelar{
     position: absolute;
