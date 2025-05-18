@@ -126,7 +126,7 @@ main{
 /*CONTENEDOR DE OPCIONES*/
 .cont-config-opciones{
     border-radius: 15px;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: start;
@@ -236,7 +236,7 @@ main{
 .cont-form-personal form{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     place-items: center;
     place-content: center;
     width: 100%;
@@ -268,8 +268,11 @@ main{
     outline: 2px solid var(--color-primario);
     border: none;
 }
-.cont-btn-form{
+.cont-inputs:nth-child(3){
     grid-column: 1/3;
+}
+.cont-form-personal .cont-btn-form{
+    grid-column: 2/3;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -393,10 +396,17 @@ main{
     background-color: rgb(206, 202, 202);
     border-radius: 5px;
 }
+.container-form-seguridad .cont-btn-form{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    gap: 10px;
+}
 /*DISEÑO DEL FORMULARIO PARA EDITAR LA  INFORMACIÓN DE LA TIENDA*/
 .container-info-tienda{
     border-radius: 15px;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: start;
     justify-content: start;
@@ -472,6 +482,7 @@ main{
     border-left: 1px solid var(--color-borde-claro);
     border-right: 1px solid var(--color-borde-claro);
     border-bottom: 1px solid var(--color-borde-claro);
+    margin-bottom: 20px;
 }
 .encabezado-vista-previa{
     width: 100%;
@@ -541,7 +552,7 @@ main{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 60px 60px 100px 60px auto;
+    grid-template-rows: 60px 100px 60px auto;
     gap: 20px;
     place-content: center;
 }
@@ -567,23 +578,184 @@ main{
     font-family: Arial, Helvetica, sans-serif;
     font-size: .8em;
 }
-.cont-inputs-tienda:nth-child(5){
+.cont-inputs-tienda:nth-child(4){
     grid-column: 1/4;
 }
-.cont-btn-form {
-    width: 100%;
+.formulario-tienda-datos .cont-btn-form{
     grid-column: 3/4;
-    grid-row: 5/6;
+    grid-row: 4/5;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    gap: 10px;
 }
-
 /*CONTENEDOR FORMULARIO DE HORARIOS*/
 .cont-formulario-horarios{
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.formulario-tienda-horarios{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 80px);
+    margin-top: 20px;
+    gap: 10px;
 }
 
+.cont-checkbox{
+    border: 1px solid var(--color-borde-claro);
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cont-checkbox label{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.checkbox, .checkboxMetodo{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.checkmark {
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.checkmark:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0;
+    bottom: 0px;
+    top: 0;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.checkbox:checked + .checkmark {
+    background-color: #6b21a8;
+}
+
+.checkbox:focus + .checkmark {
+    box-shadow: 0 0 1px #6b21a8;
+}
+
+.checkbox:checked + .checkmark:before {
+    transform: translateX(30px);
+}
+
+.cont-select{
+    width: 100%;
+}
+.cont-select select{
+    width: 46%;
+    border-radius: 5px;
+    padding: 2px;
+}
+.formulario-tienda-horarios .cont-btn-form{
+    grid-column: 3/4;
+    grid-row: 5/4;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    gap: 10px;
+}
 /*CONTENEDOR FORMULARIO DE METODOS DE PAGO*/
 .cont-formulario-pago{
+    width: 100%;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+}
+.parrafoEncabezado2{
+    font-size: .8em;
+    color: var(--color-text3);
+    margin: 10px 0;
+}
+.spanSubtema{
+    margin: 0 10px;
+    background-color: rgb(224, 224, 224);
+    padding: 3px;
+    font-size: .7em;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.formulario-tienda-pago{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 30px;
+    margin-top: 20px;
+}
+.cont-checkbox-pago{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    border: 1px solid var(--color-borde-claro);
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+.cont-checkbox-pago svg{
+    width: 20px;
+    height: 20px;
+}
+
+.cont-checkbox-pago label{
+    cursor: pointer;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.cont-checkbox-pago label p{
+    font-size: .8em;
+    color: var(--color-text3);
+}
+.cont-checkbox-pago:has(.checkboxMetodo:checked) {
+    border: 2px solid var(--color-primario);
+}
+.cont-checkbox-pago label:has(.checkboxMetodo:checked) {
+    color: var(--color-primario);
+}
+.cont-checkbox-pago:has(.checkboxMetodo:checked) svg {
+    fill: var(--color-primario);
+}
+.formulario-tienda-pago .cont-btn-form{
+    grid-column: 3/4;
+    grid-row: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    gap: 10px;
 }
 /*DISEÑO DEL MODAL*/
 #modalCencelar{

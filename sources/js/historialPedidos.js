@@ -16,10 +16,10 @@ cardsPedido.forEach(card => {
             estado.style.color = "red";
             break;
         case "Pendiente":
-            estado.style.color = "blue";
-            break;
-        case "En espera":
             estado.style.color = "purple";
+            break;
+        case "Pedido listo":
+            estado.style.color = "blue";
             break;
         default:
             boton.style.display = "none";

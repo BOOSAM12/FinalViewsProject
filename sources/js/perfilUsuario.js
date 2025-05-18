@@ -2,8 +2,10 @@
 const contenedorPrincipalPerfil =  document.querySelector('.cont-config-opciones');
 const contenedorInformacionPersonal =  document.querySelector('.cont-form-personal');
 const contenedorSeguridad =  document.querySelector('.container-form-seguridad');
+const contenedorInfoTienda = document.querySelector('.container-info-tienda')
 const abrirContInfoPersonal = document.getElementById('abrirContInfoPersonal');
 const abrirContSeguridad = document.getElementById('abrirContSeguridad');
+const abrirContInfoTienda = document.getElementById('abirContInfoTienda');
 
 //ABRIR EL CONTENEDOR DE INFORMACION PERSONAL
 abrirContInfoPersonal.addEventListener('click', function() {
@@ -16,6 +18,12 @@ abrirContSeguridad.addEventListener('click', function() {
   contenedorSeguridad.style.display = 'flex';
   contenedorPrincipalPerfil.style.display = 'none';
 });
+
+abrirContInfoTienda.addEventListener('click', function() {
+  contenedorInfoTienda.style.display = 'flex';
+  contenedorPrincipalPerfil.style.display = 'none';
+});
+
 
 // Función para verificar si un elemento está oculto
 function estaOculto(elemento) {
@@ -88,6 +96,9 @@ const btnCancelarModal = document.getElementById('btnCancelarModal');
 const btnCancelarContrasena = document.getElementById('btnCancelarContrasena');
 const btnCancelarInfoPersonal = document.getElementById('btnCancelarInfoPersonal');
 const btnAjusteCuenta = document.getElementById('btnAjusteCuenta');
+const btnCancelarInfoTiendaBasica = document.getElementById('btnCancelarInfoTienda');
+const btnCancelarHorariosTienda = document.getElementById('btnCancelarHorarios');
+const btnCancelarMetodosPagoTienda = document.getElementById('btnCancelarMetodoPago');
 
 // ——— Funciones auxiliares ———
 
@@ -135,7 +146,36 @@ if (btnCancelarInfoPersonal) {
   });
 }
 
-// 3) Ajustes de cuenta: solo si el contenedor principal NO está visible
+// 3) Cancelar en formulario de información basica de la tienda
+if (btnCancelarInfoTiendaBasica) {
+  btnCancelarInfoTiendaBasica.addEventListener('click', () => {
+    openConfirm(() => {
+      // Aquí puedes resetear o limpiar el formulario de información personal
+      console.log('Cancelar en formulario de información basica de la tienda.');
+    });
+  });
+}
+
+// 4) Cancelar en formulario de información de los horarios de la tienda
+if (btnCancelarHorariosTienda) {
+  btnCancelarHorariosTienda.addEventListener('click', () => {
+    openConfirm(() => {
+      // Aquí puedes resetear o limpiar el formulario de información personal
+      console.log('Cancelar en formulario de información de los horarios de la tienda');
+    });
+  });
+}
+
+// 5) Cancelar en formulario de información de los metodos de pago de la tienda
+if (btnCancelarMetodosPagoTienda) {
+  btnCancelarMetodosPagoTienda.addEventListener('click', () => {
+    openConfirm(() => {
+      // Aquí puedes resetear o limpiar el formulario de información personal
+      console.log('Cancelar en formulario de información de los metodos de pago de la tienda.');
+    });
+  });
+}
+// 6) Ajustes de cuenta: solo si el contenedor principal NO está visible
 if (btnAjusteCuenta) {
   btnAjusteCuenta.addEventListener('click', () => {
     const estilos = window.getComputedStyle(contenedorPrincipalPerfil);
@@ -154,8 +194,93 @@ if(btnAceptarModal){
   btnAceptarModal.addEventListener('click', function() {
     contenedorSeguridad.style.display = 'none';
     contenedorInformacionPersonal.style.display   = 'none';
+    contenedorInfoTienda.style.display   = 'none';
     contenedorPrincipalPerfil.style.display = 'flex';
   });
 }
 
 
+//LOGICA DEL CONTENEDOR PARA ACTUALIZAR LA INFORMACIÓN DE LA TIENDA
+const abrirInfoBasica = document.getElementById('btnInfoBasica');
+const abrirInfoHorarios = document.getElementById('btnDatosEnvio');
+const abrirInfoMetodosPago = document.getElementById('btnDatosPago');
+
+const formInfoBasica = document.querySelector('.cont-formulario-basico');
+const formInfoHorarios = document.querySelector('.cont-formulario-horarios');
+const formInfoMetodosPago = document.querySelector('.cont-formulario-pago');
+
+const tabs = [
+  { btn: abrirInfoHorarios,    form: formInfoHorarios    },
+  { btn: abrirInfoMetodosPago, form: formInfoMetodosPago },
+  { btn: abrirInfoBasica,      form: formInfoBasica      }
+];
+
+// Clases de animación (por ejemplo de Animate.css)
+const ANIM_BASE   = 'animate__animated';
+const ANIM_FADEIN = 'animate__fadeInRight';
+
+// ——— Función para activar una “pestaña” por índice ———
+function activarTab(seleccionada) {
+  tabs.forEach(({ btn, form }) => {
+    const isActive = btn === seleccionada;
+
+    // Mostrar u ocultar directamente con display
+    form.style.display = isActive ? 'flex' : 'none';
+
+    // Manejar animación solo para la sección básica
+    if (form === formInfoBasica) {
+      if (isActive) {
+        form.classList.remove(ANIM_BASE, ANIM_FADEIN);
+        void form.offsetWidth; // forzar reflow
+        form.classList.add(ANIM_BASE, ANIM_FADEIN);
+        form.addEventListener('animationend', () => {
+          form.classList.remove(ANIM_BASE, ANIM_FADEIN);
+        }, { once: true });
+      } else {
+        // Asegura que la animación previa se haya limpiado
+        form.classList.remove(ANIM_BASE, ANIM_FADEIN);
+      }
+    }
+
+    // Botón activo visual (puedes mantener esta clase o estilizar inline)
+    btn.classList.toggle('activeInfoTienda', isActive);
+  });
+}
+
+// ——— Asignar listeners a los botones ———
+tabs.forEach(({ btn }) => {
+  if (!btn) return;
+  btn.addEventListener('click', () => activarTab(btn));
+});
+
+// Opcional: Al cargar la página, activar la primera sección o dejar todas ocultas
+// activarTab(abrirInfoBasica);
+
+// abrirInfoHorarios.addEventListener('click', () => {
+//   formInfoHorarios.style.display = 'flex';
+//   formInfoBasica.style.display = 'none';
+//   formInfoMetodosPago.style.display = 'none';
+//   abrirInfoHorarios.classList.add('activeInfoTienda');
+//   abrirInfoMetodosPago.classList.remove('activeInfoTienda');
+//   abrirInfoBasica.classList.remove('activeInfoTienda');
+// });
+
+// abrirInfoMetodosPago.addEventListener('click', () => {
+//   formInfoMetodosPago.style.display = 'flex';
+//   formInfoHorarios.style.display = 'none';
+//   formInfoBasica.style.display = 'none';
+//   abrirInfoMetodosPago.classList.add('activeInfoTienda');
+//   abrirInfoHorarios.classList.remove('activeInfoTienda');
+//   abrirInfoBasica.classList.remove('activeInfoTienda');
+
+// });
+
+// abrirInfoBasica.addEventListener('click', () => {
+//   formInfoBasica.style.display = 'flex';
+//   formInfoHorarios.style.display = 'none';
+//   formInfoMetodosPago.style.display = 'none';
+//   abrirInfoBasica.classList.add('activeInfoTienda');
+//   abrirInfoMetodosPago.classList.remove('activeInfoTienda');
+//   abrirInfoHorarios.classList.remove('activeInfoTienda');
+//   formInfoBasica.classList.add('animate__animated','animate__fadeInRight');
+// });
