@@ -19,6 +19,7 @@
     margin: 0;
     padding: 0;
     font-family: "ADLaM Display", serif;
+    font-weight: 300;
     scrollbar-width: thin;
     scrollbar-color: #888 transparent;
 
@@ -108,14 +109,19 @@ main{
     box-shadow: 2px 5px 10px var(--color-terciario);
 }
 /*DISEÑO DE LAS CARD DE LAS TIENDAS*/
-.cont-cards-tiendas{
+.titulo-contenedor{
     width: 80vw;
     margin-top: 50px;
+}
+.cont-cards-tiendas{
+    width: 80vw;
+    margin-top: 20px;
     margin-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(4, minmax(250px, 300px));
     grid-template-rows: repeat(3, 300px);
     gap: 20px;
+    place-content: center;
 }
 .card-tienda{
     display: flex;
@@ -152,8 +158,8 @@ main{
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: var(--color-terciario);
-    color: white;
+    background-color: white;
+    color: var(--color-terciario);
     padding: 8px;
     font-size: 1em;
     font-weight: 300;
@@ -163,25 +169,35 @@ main{
 
 .estrella-container {
     position: absolute;
-    display: inline-block;
+    display: flex;
+    width: 32px;
+    height: 32px;
     right: 10px;
-    top: 5px;
+    top: 10px;
     z-index: 2;
-
+    background-color: white;
+    border-radius: 50%;
 }
 .estrella-container input[type="checkbox"] {
     display: none;
 }
 .estrella {
+    position: relative;
     font-size: 24px;
     color: transparent;
     cursor: pointer;
     text-shadow: 0 0 0 gray;
     transition: color 0.3s;
+    padding: 0px 6px;
 }
 .estrella-container input[type="checkbox"]:checked + .estrella {
-    color: gold;
+    color: var(--color-primario);
     text-shadow: none;
+}
+/* Cuando dentro de .cont-img haya un checkbox marcado, aplica al <p> */
+.cont-img:has(.estrella-container input:checked) p {
+    background-color: var(--color-terciario);
+    color: white;
 }
 .cont-info-tienda{
     width: 100%;
