@@ -189,6 +189,7 @@ main{
 .estrella {
     position: relative;
     font-size: 24px;
+    margin: -2px 0px;
     color: transparent;
     cursor: pointer;
     text-shadow: 0 0 0 gray;
