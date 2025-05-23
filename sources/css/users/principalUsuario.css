@@ -4,6 +4,7 @@
     --color-terciario: #3F1650;
     --color-cuarto: #270D32;
     --color-quinto: #DDBFE3;
+    --color-sexto: #62238D;
     --color-negro: #000000;
     --color-borde-claro:#999999;
     --color-text1:#757575;
@@ -22,6 +23,7 @@
     font-weight: 300;
     scrollbar-width: thin;
     scrollbar-color: #888 transparent;
+    scroll-behavior: smooth;
 
 }
 html{
@@ -131,6 +133,9 @@ main{
     width: 100%;
     height: 300px;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
+    border-radius: 15px;
+    cursor: pointer;
 }
 .card-tienda:hover{
     scale: 1.05;
@@ -202,7 +207,6 @@ main{
 .cont-info-tienda{
     width: 100%;
     height: 50%;
-    border: 1px solid var(--color-secundario);
     border-top: none;
     border-radius: 0 0 15px 15px;
     padding: 10px;
