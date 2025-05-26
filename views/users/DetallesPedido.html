@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de pedido</title>
+    <link rel="shortcut icon" href="../../sources/img/logo-pediYa.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../sources/css/users/detallesPedidos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="cont-encabezado">
+            <h2>Confirmación de pedido</h2>
+        </section>
+        <section class="cont-alerta">
+            <h3>Información importante</h3>
+            <p>Tu solicitud de pedido ha sido enviada a la tienda. PediYÁ no gestiona los envíos a domicilio ni los pagos. Si la tienda ofrece domicilio (verifica en su perfil), debes contactarla directamente. El pago total se realiza directamente a la tienda al recoger el pedido o al recibir el domicilio.</p>
+        </section>
+        <section class="titulos">
+            <h2>Resumen del pedido</h2>
+            <h2 class="nombre-tienda">Nombre de la tienda</h2>
+        </section>
+        <section class="cont-productos-detalles">
+            <article class="producto">
+                <article class="cont-img">
+                    <img src="../../sources/img/rice-ball_.png" alt="">
+                </article>
+                <article class="cont-info-prducto">
+                    <h3>Nombre del producto</h3>
+                    <p class="descripcion-producto">Descripción del producto</p>
+                    <p class="precio-producto">Precio: $10.00</p>
+                </article>
+                <article class="cont-cantidad">
+                    <p>2</p>
+                </article>
+            </article>
+        </section>
+        <section class="cont-nota">
+            <h3>Notas para el tendero</h3>
+            <textarea name="" id="" placeholder="Agrega instrucciones  especiales para el tendero (coordianacion de domicilio, metodo de pago preferido, etc.) "></textarea>
+        </section>
+        <section class="cont-total">
+            <h3>Total a pagar</h3>
+            <p>$10.00</p>
+        </section>
+        <section class="cont-btns">
+            <a href="PrincipalUsuario.html" class="btn-confirmar-pedido">Confirmar pedido</a>
+        </section>
+        
+        <dialog id="modalDetallesPedido">
+            <section class="cont-info-modal">
+                <img src="../../sources/img/circle-check-solid.svg" alt="">
+                <p>Tu solicitud de pedido ha sido confirmada</p>
+            </section>
+        </dialog>
+        
+    </main>
+    <script src="../../sources/js/nav-bar.js"></script>
+    <script src="../../sources/js/carrito.js"></script>
+    <script src="../../sources/js/notificaciones.js"></script>
+    <script src="../../sources/js/detallesPedido.js"></script>
+</body>
+</html>
