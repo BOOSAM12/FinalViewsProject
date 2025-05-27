@@ -17,16 +17,16 @@
         </section>
         <section class="container-form">
             <h2>Registro</h2>
-            <form action="#" method="POST">
+            <form id="formRegistro">
                 <article class="cont-inputs">
-                    <input type="text" name="" id="" placeholder="Nombre Completo" class="input-info">
-                    <input type="number" name="" id="" placeholder="Número Telefónico" class="input-info">
+                    <input type="text" name="" id="nombreCompleto" placeholder="Nombre Completo" class="input-info">
+                    <input type="number" name="" id="numero" placeholder="Número Telefónico" class="input-info">
                 </article>
                 <article class="cont-inputs">
-                    <input type="email" name="" id="" placeholder="Correo Electrónico" class="input-info">
+                    <input type="email" name="" id="correo" placeholder="Correo Electrónico" class="input-info">
                 </article>
                 <article class="cont-inputs">
-                    <input type="text" name="" id="" placeholder="Dirección" class="input-info">
+                    <input type="text" name="" id="direccion" placeholder="Dirección" class="input-info">
                     <select>
                         <option value="">Barrio</option>
                         <option value="1">Cliente</option>
@@ -54,6 +54,13 @@
             </article>
         </section>
     </main>
+    <dialog id="modalError" class="modal-error" closedby="any">
+        <div class="modal-content">
+          <p id="mensajeError">Texto del error aquí</p>
+          <button id="cerrarModal">Entendido</button>
+        </div>
+    </dialog>
     <script src="../sources/js/register.js"></script>
+    <script src="../sources/js/validacionContraseña.js"></script>
 </body>
 </html>
