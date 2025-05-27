@@ -80,11 +80,11 @@ main{
 
 .cont-horario{
     display: flex;
-    justify-content: space-between;
-    align-items: center ;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     color: white;
     font-weight: 300;
-    width: 30%;
     margin-top: 20px;
 
 }
@@ -92,7 +92,7 @@ main{
     width: var(--tamaño-icono3);
 }
 .cont-acciones-tienda{
-    width: 50%;
+    width: 80%;
     display: flex;
     gap: 10px;
     margin-top: 20px;
@@ -102,10 +102,11 @@ main{
     height: var(--tamaño-icono2);
     margin-right: 10px;
 }
+
 .cont-acciones-tienda button{
-    width: 30%;
+    width: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 10PX;
     background-color: transparent;
@@ -218,8 +219,6 @@ main{
     background-color: var(--color-sexto);
     color: white;
 }
-
-
 .cont-cards-productos{
     width: 100%;
     height: 400px;
@@ -230,7 +229,6 @@ main{
     overflow-y: auto;
     justify-content: space-between;
     align-content: space-around;
-
 }
 .card-producto{
     width: 200px;
@@ -244,7 +242,6 @@ main{
     margin-bottom: 15px;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.263);
     transition: all 0.3s ease-in-out;
-    
 }
 .card-producto:hover{
     transform: scale(1.02);
@@ -334,15 +331,21 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3px;
+    padding: 0px 10px;
     background-color: var(--color-sexto);
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
     border: none;
 }
-
+.cont-cantidad-producto-detalles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+}
 /*DISEÑO DEL CONTENEDOR DE DETALLES*/
 .cont-detalles-tienda{
     width: 95vw;
@@ -402,7 +405,7 @@ main{
     justify-content: flex-start;
     align-items: center;
 }
-.sect-dato:nth-child(1), .sect-dato:nth-child(2), .sect-dato:nth-child(3), .info-adicional:nth-child(1){
+.sect-dato:nth-child(1), .sect-dato:nth-child(2), .info-adicional:nth-child(1){
     border-bottom: 1px solid var(--color-borde-claro);
 }
 .sect-dato img, .info-adicional img{
