@@ -18,8 +18,11 @@
         </section>
         <section class="encabezado-secundario">
             <h3>Registro de tu tienda</h3>
-            <div class="progreso-registro-tienda"></div>
-            <p class="indicadorPaso">Paso <span class="paso-actual">1</span> de 3</p>
+            <div class="progreso-registro-tienda">
+                <div class="barra-progreso">
+                </div>
+            </div>
+            <p class="indicadorPaso"><span class="paso-actual"></span></p>
         </section>
         <form action="" class="form-registro-tienda">
             <section class="cont-form-info-basica">
@@ -39,7 +42,7 @@
                     <input type="text" name="direccionTienda" id="direccionTienda">
                 </article>
                 <article class="cont-input-info-basica">
-                    <label for="ciudadTienda">Barrio</label>
+                    <p>Barrio</p>
                     <select name="" id="">
                         <option value="">Seleccione una opción</option>
                         <option value="1">Barrio 1</option>
@@ -48,7 +51,7 @@
                     </select>
                 </article>
                 <article class="cont-input-info-basica">
-                    <label for="direccionTienda">Descripción breve de la tienda</label>
+                    <p>Descripción breve de la tienda</p>
                     <textarea name="" id="" placeholder="Agrega una breve descripcion de tu tienda"></textarea>
                 </article>
                 <article class="cont-titulo-seccion">
@@ -59,7 +62,8 @@
                         <img src="../../sources/img/camera.svg" alt="">
                     </label>
                     <input type="file" accept="image/*" name="" id="imagenInput" alt="Agrega una imagen de tu tienda" class="input-subir-imagen">
-                    <div id="preview"></div>
+                    <div id="preview">
+                    </div>
                 </article>
             </section>
             <section class="cont-form-info-2">
@@ -369,107 +373,118 @@
                 </section>
             </section>
             <section class="cont-form-info-3">
-                <article class="cont-titulo-seccion">
-                    <h3 class="titulo-seccion">Métodos de Pago que Aceptas</h3>
-                </article>
-                <article class="cont-check-metodos-pago">
-                    <label for="checkboxEfectivo">Efectivo
-                        <input type="checkbox" id="checkboxEfectivo" class="checkboxMetodoPago">
-                    </label>
-                    <label for="checkboxTransferenciaBancaria">Transferencia bancaria
-                        <input type="checkbox" id="checkboxTransferenciaBancaria" class="checkboxMetodoPago">
-                    </label>
-                    <label for="checkboxNequi">Nequi
-                        <input type="checkbox" id="checkboxNequi" class="checkboxMetodoPago">
-                    </label>
-                    <label for="checkboxDaviplata">Daviplata
-                        <input type="checkbox" id="checkboxDaviplata" class="checkboxMetodoPago">
-                    </label>
-                    <label for="checkboxPSE">PSE
-                        <input type="checkbox" id="checkboxPSE" class="checkboxMetodoPago">
-                    </label>
-                    <label for="checkboxTarjetaCredito">Tarjeta de Crédito
-                        <input type="checkbox" id="checkboxTarjetaCredito" class="checkboxMetodoPago">
-                    </label>
-                    <label for="checkboxTransferenciaDebito">Tarjeta de Débito
-                        <input type="checkbox" id="checkboxTransferenciaDebito" class="checkboxMetodoPago">
-                    </label>
-                </article>
-                <article class="cont-documentos-requeridos">
-                    <section class="cont-titulo-seccion">
-                        <h3 class="titulo-seccion">Documentos requeridos</h3>
-                    </section>
-                    <section class="cont-documento">
-                        <h4>1</h4>
-                        <label for="subirDocumentoIdentidad">
-                            <input type="file" id="subirDocumentoIdentidad" class="subir-documento-input">
-                            <article class="info-documento">
-                                <p>Identificaciòn del propietario</p>
-                                <p>Cédula de ciudadanía o cédula de extranjería</p>
-                            </article>
-                            <img src="../../sources/img/file.svg" alt="subir documento">
+                <article class="container-general-form-info-3">
+                    <article class="cont-titulo-seccion">
+                        <h3 class="titulo-seccion">Métodos de Pago que Aceptas</h3>
+                    </article>
+                    <article class="cont-check-metodos-pago">
+                        <label for="checkboxEfectivo">Efectivo
+                            <input type="checkbox" id="checkboxEfectivo" class="checkboxMetodoPago">
                         </label>
-                    </section>
-                    <section class="cont-documento">
-                        <article class="sub-cont-documento">
-                            <h4>2</h4>
-                            <article class="info-documento">
-                                <p>Número de RUT</p>
-                                <p>Regsitro único Tributario</p>
-                            </article>
-                        </article>
-                        <input type="text" id="numeroDeRut">
-                    </section>
-                    <section class="cont-documento">
-                        <h4>3</h4>
-                        <label for="subirDocumentoCamaraComercio">
-                            <input type="file" id="subirDocumentoCamaraComercio" class="subir-documento-input">
-                            <article class="info-documento">
-                                <p>Registro de Cámara de Comercio</p>
-                                <p>Certificado de existencia y representación legal</p>
-                            </article>
-                            <img src="../../sources/img/file.svg" alt="subir documento">
+                        <label for="checkboxTransferenciaBancaria">Transferencia bancaria
+                            <input type="checkbox" id="checkboxTransferenciaBancaria" class="checkboxMetodoPago">
                         </label>
-                    </section>
-                    <section class="cont-check-autorizacion">
-                        <input type="checkbox" name="" id="autorizacionDocuemntos">
-                        <label for="autorizacionDocuemntos"> 
-                            Declaro que toda la información proporcionada es verídica y autorizo su verificación para el proceso de registro en PediYÁ.
+                        <label for="checkboxNequi">Nequi
+                            <input type="checkbox" id="checkboxNequi" class="checkboxMetodoPago">
                         </label>
-                    </section>
-                    
-                </article>
-                <article class="cont-informacion-importante">
-                    <section class="cont-titulo-seccion">
-                        <h3 class="titulo-seccion">Información importante</h3>
-                    </section>
-                    <section class="cont-aviso-1">
-                        <img src="../../sources/img/alert-triangle.svg" alt="información importante">
-                        <section class="cont-info-aviso-1">
-                            <h4 class="titulo-aviso-1">Proceso de verificación</h4>
-                            <p class="info-aviso-1">
-                                Una vez completes tu registro, nuestro equipo verificará la información y documentos. Este proceso puede tomar entre 24-48 horas. Te notificaremos por correo electrónico cuando tu tienda esté activa.
-                            </p>
+                        <label for="checkboxDaviplata">Daviplata
+                            <input type="checkbox" id="checkboxDaviplata" class="checkboxMetodoPago">
+                        </label>
+                        <label for="checkboxPSE">PSE
+                            <input type="checkbox" id="checkboxPSE" class="checkboxMetodoPago">
+                        </label>
+                        <label for="checkboxTarjetaCredito">Tarjeta de Crédito
+                            <input type="checkbox" id="checkboxTarjetaCredito" class="checkboxMetodoPago">
+                        </label>
+                        <label for="checkboxTransferenciaDebito">Tarjeta de Débito
+                            <input type="checkbox" id="checkboxTransferenciaDebito" class="checkboxMetodoPago">
+                        </label>
+                    </article>
+                    <article class="cont-documentos-requeridos">
+                        <section class="cont-titulo-seccion">
+                            <h3 class="titulo-seccion">Documentos requeridos</h3>
                         </section>
-                    </section>
-                    <section class="cont-aviso-2">
-                        <img src="../../sources/img/verified.svg" alt="">
-                        <section class="cont-info-aviso-2">
-                            <h4 class="titulo-aviso-2">¡Próximo Paso!</h4>
-                            <p class="info-aviso-2">
-                                Una vez activada tu tienda, podrás agregar productos, gestionar inventario y comenzar a recibir pedidos de clientes en tu barrio.
-                            </p>
+                        <section class="cont-documento">
+                            <h4>1</h4>
+                            <label for="subirDocumentoIdentidad">
+                                <input type="file" id="subirDocumentoIdentidad" class="subir-documento-input">
+                                <article class="info-documento">
+                                    <p>Identificaciòn del propietario</p>
+                                    <p>Cédula de ciudadanía o cédula de extranjería</p>
+                                </article>
+                                <img src="../../sources/img/file.svg" alt="subir documento">
+                            </label>
                         </section>
-                    </section>
+                        <section class="cont-documento">
+                            <article class="sub-cont-documento">
+                                <h4>2</h4>
+                                <article class="info-documento">
+                                    <p>Número de RUT</p>
+                                    <p>Regsitro único Tributario</p>
+                                </article>
+                            </article>
+                            <input type="text" id="numeroDeRut">
+                        </section>
+                        <section class="cont-documento">
+                            <h4>3</h4>
+                            <label for="subirDocumentoCamaraComercio">
+                                <input type="file" id="subirDocumentoCamaraComercio" class="subir-documento-input">
+                                <article class="info-documento">
+                                    <p>Registro de Cámara de Comercio</p>
+                                    <p>Certificado de existencia y representación legal</p>
+                                </article>
+                                <img src="../../sources/img/file.svg" alt="subir documento">
+                            </label>
+                        </section>
+                        <section class="cont-check-autorizacion">
+                            <input type="checkbox" name="" id="autorizacionDocuemntos">
+                            <label for="autorizacionDocuemntos"> 
+                                Declaro que toda la información proporcionada es verídica y autorizo su verificación para el proceso de registro en PediYÁ.
+                            </label>
+                        </section>
+                        
+                    </article>
+                    <article class="cont-informacion-importante">
+                        <section class="cont-titulo-seccion">
+                            <h3 class="titulo-seccion">Información importante</h3>
+                        </section>
+                        <section class="cont-aviso-1">
+                            <img src="../../sources/img/alert-triangle.svg" alt="información importante">
+                            <section class="cont-info-aviso-1">
+                                <h4 class="titulo-aviso-1">Proceso de verificación</h4>
+                                <p class="info-aviso-1">
+                                    Una vez completes tu registro, nuestro equipo verificará la información y documentos. Este proceso puede tomar entre 24-48 horas. Te notificaremos por correo electrónico cuando tu tienda esté activa.
+                                </p>
+                            </section>
+                        </section>
+                        <section class="cont-aviso-2">
+                            <img src="../../sources/img/verified.svg" alt="">
+                            <section class="cont-info-aviso-2">
+                                <h4 class="titulo-aviso-2">¡Próximo Paso!</h4>
+                                <p class="info-aviso-2">
+                                    Una vez activada tu tienda, podrás agregar productos, gestionar inventario y comenzar a recibir pedidos de clientes en tu barrio.
+                                </p>
+                            </section>
+                        </section>
+                    </article>
                 </article>
-
             </section>
             <section class="cont-acciones-form">
-                <button class="btn-volver">Volver</button>
-                <button class="btn-siguiente">Siguiente</button>
-                <input type="submit" value="Publicar tienda" name="" class="btn-input-submit">
+                <button type="button" class="btn-volver">Volver</button>
+                <button type="button" class="btn-siguiente">Siguiente</button>
+                <input type="submit" value="Publicar tienda" name="" class="btn-input-submit" id="enviarRegistroTienda">
             </section>
         </form>
+        <dialog class="modalConfirmacionRegistroTienda" closedby="any">
+            <section class="cont-info-modal">
+                <img src="../../sources/img/verified.svg" alt="">
+                <h2>¡Registro Completado!</h2>
+                <p>Tu tienda ha sido registrada exitosamente. Estamos revisando tu información y te 
+                    notificaremos cuando se apruebe tu registro.</p>
+                <a href="">Ir al panel de control</a>
+            </section>
+        </dialog>
     </main>
+    <script src="../../sources/js/tendero/registroTienda.js"></script>
 </body>
 </html>

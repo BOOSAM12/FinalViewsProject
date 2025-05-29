@@ -774,8 +774,12 @@ main{
     border: none;
     text-align: center;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
-    
 }
+#modalCencelar::backdrop {
+    background-color: rgba(0, 0, 0, 0.6); /* Negro con transparencia */
+    backdrop-filter: blur(3px);          /* Difuminado opcional */
+}
+  
 #modalCencelar h3{
     font-size: 1.2rem;
     color: black;

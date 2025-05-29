@@ -78,14 +78,16 @@ main{
     background-color: rgb(196, 192, 192);
     border-radius: 15px;
     transition: all 300ms ease-in-out ;
+    position: relative;
 }
-.progreso-registro-tienda::before{
+.barra-progreso{
     content: "";
     position: absolute;
     width: 33%;
     height: 5px;
     background-color: var(--color-primario);
     border-radius: 15px;
+    transition: width 300ms ease-in-out;
 }
 .indicadorPaso{
     position: absolute;
@@ -104,10 +106,12 @@ main{
 /*CONTENEDOR DE INFORMACION BASICA DE REGISTRO DE TIENDA*/
 .cont-form-info-basica{
     width: 100%;
-    display: none;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, auto);
     column-gap: calc(100% - 80%) ;
+    background-color: white;
+
 }
 .cont-titulo-seccion{
     grid-column: 1/3;
@@ -121,7 +125,7 @@ main{
     justify-content: center;
     margin-bottom: 10px;
 }
-.cont-input-info-basica label{
+.cont-input-info-basica label, .cont-input-info-basica p{
     font-size: .8em;
     margin-bottom: 5px;
 }
@@ -140,6 +144,10 @@ main{
     height: 30px;
     border-radius: 10px;
     padding: 0px 7px;
+    font-size: .8em;
+}
+.cont-input-info-basica select option{
+    font-size: .8em;
 }
 .cont-input-info-basica:nth-child(6){
     grid-column: 1/3;
@@ -185,9 +193,14 @@ main{
 .input-subir-imagen{
     display: none;
 }
+#preview{
+    position: absolute;
+    right: 20px;
+}
 /*CONTENEDOR DE REGISTRO PASO 2*/
 .cont-form-info-2{
     display: none;
+    background-color: white;
 }
 /*CONTENEDOR FORMULARIO DE HORARIOS*/
 .cont-horarios{
@@ -367,6 +380,8 @@ main{
 /*CONTENEDOR DE REGISTRO PASO 3*/
 .cont-form-info-3{
     width: 100%;
+    display: none;
+    background-color: white;
 }
 .cont-check-metodos-pago{
     width: 100%;
@@ -495,7 +510,7 @@ main{
     justify-content: space-between;
     margin-top: 20px;
 }
-.cont-acciones-form button, .btn-input-submit{
+.btn-siguiente, .btn-input-submit{
     width: auto;
     height: 30px;
     border-radius: 10px;
@@ -507,6 +522,340 @@ main{
     padding: 0 15px;
     transition: all 300ms ease-in-out;
 }
+.btn-volver{
+    width: auto;
+    height: 30px;
+    border-radius: 10px;
+    border: .5px solid black;
+    background-color: white;
+    color: black;
+    font-size: .9em;
+    cursor: pointer;
+    padding: 0 15px;
+    transition: all 300ms ease-in-out;
+}
 .cont-acciones-form button:hover, .btn-input-submit:hover{
     scale: 1.05;
+}
+/*DISEÑO DEL MODAL*/
+.modalConfirmacionRegistroTienda{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 400px;
+    background: white;
+    border-radius: 15px;
+    z-index: 99;
+    border: none;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.356);
+    backdrop-filter: rgba(0, 0, 0, 0.485);
+}
+.modalConfirmacionRegistroTienda::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);          
+}
+.cont-info-modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+    padding: 10px 20px;
+}
+.cont-info-modal img{
+    width: 50px;
+}
+.cont-info-modal h2{
+    color: var(--color-primario);
+    font-size: 1.8em;
+}
+.cont-info-modal p{
+    color: var(--color-text3);
+    font-size: .8em;
+}
+.cont-info-modal a{
+    color:white;
+    text-decoration: none;
+    background-color: var(--color-primario);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: .8em;
+    transition: all 300ms ease-in-out;
+}
+.cont-info-modal a:hover{
+    scale: 1.05;
+}
+
+/* ===== REGLAS RESPONSIVE ===== */
+@media screen and (max-width: 1200px) {
+    main {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    main {
+        width: 90vw;
+    }
+    
+    .cont-form-info-basica {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+    
+    .cont-input-info-basica:nth-child(n) {
+        grid-column: 1;
+    }
+    
+    .cont-horarios {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .titulo-hoarios {
+        grid-column: 1/3;
+    }
+    
+    .cont-servicios {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .titulo-servicios {
+        grid-column: 1/3;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 95vw;
+    }
+    
+    .encabezado-principal h2 {
+        font-size: 1.2em;
+    }
+    
+    .encabezado-secundario h3 {
+        font-size: 1.1em;
+    }
+    
+    .indicadorPaso {
+        font-size: 0.7em;
+    }
+    
+    .cont-horarios {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(7, 80px);
+    }
+
+    .titulo-hoarios {
+        grid-column: 1;
+    }
+    
+    .cont-servicios {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .titulo-servicios {
+        grid-column: 1;
+    }
+    
+    .cont-select {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .cont-select select {
+        width: 45%;
+    }
+    
+    .inputDomicilio {
+        width: 100%;
+    }
+    
+    .cont-check-metodos-pago label {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .cont-documento {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .cont-documento label {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .sub-cont-documento {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    #numeroDeRut {
+        width: 100%;
+    }
+    
+    .cont-advertencia-domicilio,
+    .cont-aviso-1,
+    .cont-aviso-2 {
+        flex-direction: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .cont-advertencia-domicilio img,
+    .cont-aviso-1 img,
+    .cont-aviso-2 img {
+        margin-bottom: 10px;
+    }
+    
+    .modalConfirmacionRegistroTienda {
+        width: 90%;
+        height: auto;
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .encabezado-principal {
+        padding: 10px;
+    }
+    
+    .encabezado-principal h2 {
+        font-size: 1em;
+    }
+    
+    .encabezado-principal p {
+        font-size: 0.6em;
+    }
+    
+    .encabezado-secundario {
+        padding: 10px;
+    }
+    
+    .encabezado-secundario h3 {
+        font-size: 0.9em;
+    }
+    
+    .form-registro-tienda {
+        padding: 10px;
+    }
+    
+    .cont-checkbox {
+        padding: 10px;
+    }
+    
+    .cont-checkbox label {
+        font-size: 0.8em;
+    }
+    
+    .checkmark {
+        width: 40px;
+    }
+    .checkmark:before {
+        height: 16px;
+        width: 16px;
+    }
+    
+    .checkbox:checked + .checkmark:before {
+        transform: translateX(24px);
+    }
+    
+    .cont-service-pago {
+        padding: 10px;
+    }
+    
+    .cont-service-pago label p {
+        font-size: 0.7em;
+    }
+    
+    .cont-acciones-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .cont-acciones-form button,
+    .btn-input-submit {
+        width: 90%;
+        height: 40px;
+    }
+    
+    .cont-check-autorizacion {
+        font-size: 0.7em;
+    }
+    
+    .cont-info-modal h2 {
+        font-size: 1.4em;
+    }
+    
+    .cont-info-modal p {
+        font-size: 0.7em;
+    }
+    
+    .cont-info-modal a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media screen and (max-width: 375px) {
+    .encabezado-principal h2 {
+        font-size: 0.9em;
+    }
+    
+    .encabezado-secundario h3 {
+        font-size: 0.8em;
+    }
+    
+    .titulo-seccion {
+        font-size: 0.9em;
+    }
+    
+    .cont-input-info-basica label,
+    .cont-input-info-basica p {
+        font-size: 0.7em;
+    }
+    
+    .cont-checkbox label,
+    .cont-service-pago label {
+        font-size: 0.7em;
+    }
+    
+    .cont-service-pago label p {
+        font-size: 0.6em;
+    }
+    
+    .cont-documento h4 {
+        font-size: 1em;
+    }
+    
+    .info-documento p:nth-child(1) {
+        font-size: 0.8em;
+    }
+    
+    .info-documento p:nth-child(2) {
+        font-size: 0.6em;
+    }
+    
+    .titulo-adevertencia-domicilio,
+    .titulo-aviso-1,
+    .titulo-aviso-2 {
+        font-size: 0.8em;
+    }
+    
+    .info-adevertencia-domicilio,
+    .info-aviso-1,
+    .info-aviso-2 {
+        font-size: 0.7em;
+    }
 }
