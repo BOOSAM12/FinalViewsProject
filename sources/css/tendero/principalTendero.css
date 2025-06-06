@@ -38,7 +38,7 @@ body{
     justify-content: center;
     overflow-x: hidden;
 }
-main{
+.main-principal-tendero{
     width: 90vw;
     display: flex;
     flex-direction: column;
@@ -69,6 +69,53 @@ main{
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    position: relative;
+    width: 30%;
+}
+.cont-check-estado-tienda label{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.checkbox, .checkboxMetodo{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.checkmark {
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.checkmark:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0;
+    bottom: 0px;
+    top: 0;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+.checkbox:checked + .checkmark {
+    background-color: #25a821;
+}
+.checkbox:focus + .checkmark {
+    box-shadow: 0 0 1px #25a821;
+}
+.checkbox:checked + .checkmark:before {
+    transform: translateX(30px);
 }
 .cont-botones-principal-tendero{
     width: 100%;
@@ -92,7 +139,7 @@ main{
     gap: 10px;
     text-decoration: none;
     color: black;
-    transition: all .3s ease-in;
+    transition: all .2s ease-in;
 }
 .btn-accion-tendero img{
     width: var(--tamaño-icono4);

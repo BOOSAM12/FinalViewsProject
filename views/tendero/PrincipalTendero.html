@@ -11,15 +11,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-    <main>
+    <main class="main-principal-tendero">
         <section class="cont-encabezado-principal-tendero">
             <article class="cont-titulo-encabezado-tendero">
                 <h1 class="titulo-encabezado-tendero">¡Hola, Tendero!</h1>
                 <h3>Bienvenido al panel de control</h3>
             </article>
             <article class="cont-check-estado-tienda">
-                <p>Tu tienda esta <span></span> actualmente</p>
-                <input type="checkbox" name="" id="">
+                <label for="checkboxEstadoTienda">
+                    <p id="mensajeEstadoTienda">Tu tienda esta actualmente cerrada</p>
+                    <input type="checkbox" id="checkboxEstadoTienda" class="checkbox">
+                    <span class="checkmark"></span>
+                </label>
             </article>
         </section>
         <section class="cont-botones-principal-tendero">
@@ -78,10 +81,11 @@
                     <td>1 Kilo</td>
                     <td>Verduras</td>
                     <td class="tabla-precio-producto">$2.500</td>
-                    <td class="estado-producto">Disponible</td>
+                    <td class="estado-producto">Agotado</td>
                 </tr>
             </tbody>
         </table>
     </main>
+    <script src="../../sources/js/tendero/principalTendero.js"></script>
 </body>
 </html>
