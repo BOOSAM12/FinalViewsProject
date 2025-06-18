@@ -383,6 +383,14 @@
                         <label for="descripcionTienda">Descripción</label>
                         <textarea name="" id="descripcionTienda" cols="30" rows="10" placeholder=""></textarea>
                     </section>
+                    <section class="cont-input-info-basica-editar-img">
+                        <label for="imagenInput">Sube imagen de tu tienda
+                            <img src="../../sources/img/camera.svg" alt="">
+                        </label>
+                        <input type="file" accept="image/*" name="" id="imagenInput" alt="Agrega una imagen de tu tienda" class="input-subir-imagen">
+                        <div id="preview">
+                        </div>
+                    </section>
                     <section class="cont-inputs-tienda">
                         <label for="direccionTienda">Dirección</label>
                         <input type="text" id="direccionTienda" placeholder="">
@@ -626,9 +634,25 @@
                                 <option value="">10:00 p.m</option>
                             </select>
                     </section>
+                    <section class="cont-check-domicilio">
+                        <h3 class="titulo-servicio-domicilio">Servicios  que ofreces</h3>
+                        <input type="checkbox" id="checkboxDomicilio" class="checkboxServicioDomicilio">
+
+                        <label for="checkboxDomicilio" class="checkbox-Domicilio">
+                            <img src="../../sources/img/scooter.svg" alt="">
+                            <p class="sub-titulo-servicio-domicilio">Domicilio</p>
+                            <p class="info-servicio-domicilio">Ofreces servicio de entrega a domicilio (gestionado por ti)</p>
+                        </label>
+                    </section>
+                    <section class="cont-telefono-domicilio">
+                        <label for="inputNumeroTelfonoDomicilio" class="inputNumeroTelfonoDomicilio">Teléfono de Contacto para Domicilios 
+                            <input type="text" value="" id="inputNumeroTelfonoDomicilio">
+                        </label>
+                    </section>
                     <section class="cont-btn-form">
                         <button type="button" class="btn-cancelar" id="btnCancelarHorarios">Cancelar</button>
                         <input type="submit" value="Guardar Cambios" class="btn-guardar">
+                    </section>
                 </form>
             </article>
             <!--CONTENEDOR FORMULARIO DE METODOS DE PAGO-->
